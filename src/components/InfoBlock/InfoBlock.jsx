@@ -1,4 +1,4 @@
-import { Button } from "../../utils/components/Button";
+// import { Button } from "../../utils/components/Button";
 
 const InfoBlock = (props) => {
     return (
@@ -11,7 +11,7 @@ const InfoBlock = (props) => {
             Get a <strong>-10%</strong> discount on your first order
             and free shipping on orders over <strong>$1000</strong>
           </p>
-          <Button text={"GO TO CATALOG"} />
+          {/*<Button text={"GO TO CATALOG"} />*/}
           <button className="background_red radius_50 height_50">
             GO TO CATALOG
           </button>

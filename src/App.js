@@ -4,7 +4,7 @@ import DriverBlocks from './components/DriversBlock/DriversBlock';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import InfoBlock from './components/InfoBlock/InfoBlock';
-import NessesaryPropduct from './components/NessesaryPropduct/NessesaryPropduct';
+import NecessaryProducts from './components/NessesaryPropduct/NessesaryPropduct';
 import PopularProduct from './components/PopularProduct/PopularProduct';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import ShopByCategories from './components/ShopByCategories/ShopByCategories';
@@ -27,7 +27,7 @@ function App() {
       <PopularProduct />
       <ShopByMakes />
       <SubscribeBlock />
-      <NessesaryPropduct />
+      <NecessaryProducts />
       <Footer />
     </div>
   );
