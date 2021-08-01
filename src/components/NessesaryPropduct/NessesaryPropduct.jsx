@@ -1,30 +1,38 @@
-const NessesaryPropduct = (props) => {
+import React from "react";
+import SparkPlugs from '../../common/img/nessesary/spark-plugs.png';
+import CarBulbs from '../../common/img/nessesary/car-bulbs.png';
+import OilFilters from '../../common/img/nessesary/oil-filters.png';
+import EngineOils from '../../common/img/nessesary/engine-oils.png';
+import PartsService from '../../common/img/nessesary/parts-for-service.png';
+import BrakePads from '../../common/img/nessesary/brake-pads.png';
+
+const NecessaryProducts = (props) => {
     return (
         <div className="nessesary container">
             <h2>Nessesary for every vehicle</h2>
             <div className="grid grid_columns_6 grid_gap_30 text_center rubik_regular">
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/spark-plugs.png" alt="spark-plugs" />
+                    <img src={SparkPlugs} alt="spark-plugs"/>
                     <p>Spark plugs</p>
                 </div>
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/oil-filters.png" alt="oil-filters" />
+                    <img src={OilFilters} alt="oil-filters"/>
                     <p>Oil filters</p>
                 </div>
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/car-bulbs.png" alt="car-bulbs" />
+                    <img src={CarBulbs} alt="car-bulbs"/>
                     <p>Car bulbs</p>
                 </div>
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/engine-oils.png" alt="engine-oils" />
+                    <img src={EngineOils} alt="engine-oils"/>
                     <p>Engine oils</p>
                 </div>
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/parts-for-service.png" alt="parts-for-service" />
+                    <img src={PartsService} alt="parts-for-service"/>
                     <p>Parts for service</p>
                 </div>
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
-                    <img src="img/nessesary/brake-pads.png" alt="brake-pads" />
+                    <img src={BrakePads} alt="brake-pads"/>
                     <p>Brake pads</p>
                 </div>
             </div>
@@ -32,4 +40,4 @@ const NessesaryPropduct = (props) => {
     )
 }
 
-export default NessesaryPropduct;
+export default NecessaryProducts;

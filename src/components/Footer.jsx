@@ -1,10 +1,21 @@
+import React from "react";
+import {ReactComponent as AutoBurotLogo} from '../common/img/icon/Logo.svg';
+import {ReactComponent as Instagram} from '../common/img/icon/instagram.svg';
+import {ReactComponent as Twitter} from '../common/img/icon/twitter.svg';
+import {ReactComponent as Facebook} from '../common/img/icon/facebook.svg';
+import {ReactComponent as Mastercard} from '../common/img/icon/mastercard.svg';
+import {ReactComponent as Paypal} from '../common/img/icon/paypal.svg';
+import {ReactComponent as Visa} from '../common/img/icon/visa.svg';
+
+
 const Footer = () => {
     return (
         <footer className="container rubik_regular size_14">
             <div className=" grid grid_columns_6 grid_gap_30">
                 <div className="logo">
                     <a href="/">
-                        <img src="img/icon/Logo.svg" alt="logo" /></a>
+                        <AutoBurotLogo />
+                    </a>
                 </div>
                 <div>
                     <ul>
@@ -56,17 +67,17 @@ const Footer = () => {
                     <ul>
                         <li>Follow us</li>
                         <li>
-                            <img style={{ marginRight: '20px' }} src="img/social/instagram.svg" alt="social" />
-                            <img style={{ marginRight: '20px' }} src="img/social/twitter.svg" alt="social" />
-                            <img src="img/social/facebook.svg" alt="social" />
+                            <Instagram style={{ marginRight: '20px' }} />
+                            <Twitter style={{ marginRight: '20px' }} />
+                            <Facebook />
                         </li>
                     </ul>
                     <ul>
                         <li>Payment</li>
                         <li>
-                            <img src="img/pay_methods/mastercard.svg" alt="payments" />
-                            <img src="img/pay_methods/paypal.svg" alt="payments" />
-                            <img src="img/pay_methods/visa.svg" alt="payments" />
+                            <Mastercard />
+                            <Paypal />
+                            <Visa />
                         </li>
                     </ul>
                 </div>
