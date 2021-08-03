@@ -2,15 +2,18 @@ let initialState = {
 
     category: {
         "Interior": [
-            {name: 'Mirrors', image: 'test', id: 0},
-            {test: 'Doors', test2: 'test'},
-            {test: 'Bumpers and components', test2: 'test'},
-            {test: 'test', test2: 'test'},
-            {test: 'test', test2: 'test'},
-            {test: 'test', test2: 'test'},
-            {test: 'test', test2: 'test'},
-            {test: 'test', test2: 'test'},
-            {test: 'test', test2: 'test'},],
+            {name: 'Mirrors', image: 'img/category/Headerpanels.jpg', id: 0},
+            {name: 'Doors', image: 'img/category/Headerpanels.jpg', id: 1},
+            {name: 'Bumpers and components', image: 'img/category/Headerpanels.jpg', id: 2},
+            {name: 'Hoods and components', image: 'img/category/Headerpanels.jpg', id: 3},
+            {name: 'Auto glass', image: 'img/category/Headerpanels.jpg', id: 4},
+            {name: 'Fenders and components', image: 'img/category/Headerpanels.jpg', id: 5},
+            {name: 'Front panels', image: 'img/category/Headerpanels.jpg', id: 6},
+            {name: 'Fuel tanks components', image: 'img/category/Headerpanels.jpg', id: 7},
+            {name: 'Liftgate and Hatch components', image: 'img/category/Headerpanels.jpg', id: 8},
+            {name: 'Radiator support and components', image: 'img/category/Headerpanels.jpg', id: 9},
+            {name: 'Header panels', image: 'img/category/Headerpanels.jpg', id: 10},
+            ],
         "Exterior": [
             'test'
         ],
