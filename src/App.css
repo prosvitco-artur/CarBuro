@@ -285,10 +285,10 @@ a {
     padding: 18px 0px 18px 0px;
     font-size: 17.4px;
 }
-.category_menu span{
+.category_menu a{
     margin-right: 42px;
 }
-.category_menu span:last-child{
+.category_menu a:last-child{
     margin: 0;
 }
 

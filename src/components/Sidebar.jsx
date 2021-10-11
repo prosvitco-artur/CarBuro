@@ -13,9 +13,9 @@ const Sidebar = (props) => {
     return (
         <div className="container side-bar">
             <div className="float_left">
-                <a href="/">
+                <NavLink to="/home">
                     <AutoBurotLogo/>
-                </a>
+                </NavLink>
             </div>
             <div className="float_left site_search">
                 <button

@@ -13,7 +13,7 @@ const Header = (props) => {
                     <span className="rubik_regular size_14 info_list list">9:00 - 22:00</span>
                 </div>
                 <div style={{ marginRight: '23px', marginTop: '11px' }} className="float_left">
-                    <NavLink to={"/"} className="rubik_regular size_14 info_list list pointer_red">Home</NavLink>
+                    <NavLink to={"/home"} className="rubik_regular size_14 info_list list pointer_red">Home</NavLink>
                     <NavLink to={"/about"} className="rubik_regular size_14 info_list list pointer_red">About</NavLink>
                     <NavLink to={"/delivery"} className="rubik_regular size_14 info_list list pointer_red">Delivery</NavLink>
                     <NavLink to={"/contacts"} className="rubik_regular size_14 info_list list pointer_red">Contacts</NavLink>

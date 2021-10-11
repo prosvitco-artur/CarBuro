@@ -1,18 +1,16 @@
+import { Redirect, Route } from 'react-router';
 import './App.css';
+import Catalog from './components/Catalog/Catalog';
 import CategoryNav from './components/Category/Category-nav';
-import DriverBlocks from './components/DriversBlock/DriversBlock';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import InfoBlock from './components/InfoBlock/InfoBlock';
-import NecessaryProducts from './components/NessesaryPropduct/NessesaryPropduct';
-import PopularProduct from './components/PopularProduct/PopularProduct';
-import SelectMenu from './components/SelectMenu/SelectMenu';
-import ShopByCategories from './components/ShopByCategories/ShopByCategories';
-import ShopByMakes from './components/ShopByMakes/ShopByMakes';
+import Home from './components/Home/Home';
 import Sidebar from './components/Sidebar';
-import SubscribeBlock from './components/SubscribeBlock/SubscribeBlock';
+import { getProductCategory } from "./redux/ProductReduser";
 
 function App() {
+
+  getProductCategory();
 
   return (
 
@@ -20,14 +18,12 @@ function App() {
       <Header />
       <Sidebar />
       <CategoryNav />
-      <InfoBlock />
-      <SelectMenu />
-      <ShopByCategories />
-      <DriverBlocks />
-      <PopularProduct />
-      <ShopByMakes />
-      <SubscribeBlock />
-      <NecessaryProducts />
+      <Route exact path="/">
+        <Redirect to="/home" />
+      </Route>
+
+      <Route path='/home' render={() => <Home />} />
+      <Route path='/catalog' render={() => <Catalog />} />
       <Footer />
     </div>
   );
