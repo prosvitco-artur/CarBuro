@@ -5,6 +5,7 @@ import CategoryNav from './components/Category/Category-nav';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home/Home';
+import ProductSingle from './components/ProductSingle/ProductSingle';
 import Sidebar from './components/Sidebar';
 import { getProductCategory } from "./redux/ProductReduser";
 
@@ -24,6 +25,7 @@ function App() {
 
       <Route path='/home' render={() => <Home />} />
       <Route path='/catalog' render={() => <Catalog />} />
+      <Route path='/item/:id' render={() => <ProductSingle />} />
       <Footer />
     </div>
   );

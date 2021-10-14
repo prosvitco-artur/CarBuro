@@ -179,6 +179,10 @@ a {
 .grid{
     display: grid;
 }
+.grid_columns_2{
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .grid_columns_4{
     grid-template-columns: repeat(4, 1fr);
 }
@@ -223,6 +227,12 @@ a {
 
 .info_list{
     margin-right: 30px;
+}
+
+.info_box{
+    border: 1px solid #FF8800;
+    box-sizing: border-box;
+    padding: 20px 32px;
 }
 .language{
     padding: 15px 20px 0px 0px;
