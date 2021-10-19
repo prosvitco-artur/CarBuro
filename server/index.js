@@ -1,8 +1,12 @@
 const express = require('express');
 const config = require('config');
 const mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 const app = express();
+
+app.use('/api/auth', require('./routes/auth.routes'))
+app.use('/api/product', require('./routes/product.routes')) 
 
 const PORT = config.get('port') || 5000;
 
@@ -21,5 +25,10 @@ async function start(){
 
 
 app.listen(PORT, () => console.log('App startet on PORT ' + PORT));
+
+app.post("/someRoute", function(req, res) {
+    console.log(req.body);
+    res.send({ status: 'SUCCESS' });
+  });
 
 start();
