@@ -1,0 +1,4 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://arturbabii08:2x-XQjs6JWM7GtS@cluster0.uubx3.mongodb.net/carBuro?retryWrites=true&w=majority"
+}
