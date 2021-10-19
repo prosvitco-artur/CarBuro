@@ -27,7 +27,6 @@ router.post(
                     message: 'Some Wrong in register'
                 })
             }
-            console.log(request.body)
             const { email, password } = request.body;
 
             const candidate = await User.findOne({ email: email })

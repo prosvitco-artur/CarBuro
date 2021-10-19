@@ -3,10 +3,14 @@ const config = require('config');
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
+
+const jsonParser = bodyParser.json()
+
+
 const app = express();
 
-app.use('/api/auth', require('./routes/auth.routes'))
-app.use('/api/product', require('./routes/product.routes')) 
+app.use('/api/auth',jsonParser, require('./routes/auth.routes'))
+app.use('/api/product',jsonParser,  require('./routes/product.routes')) 
 
 const PORT = config.get('port') || 5000;
 
