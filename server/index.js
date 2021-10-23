@@ -1,38 +1,29 @@
-const express = require('express');
+const express = require("express");
 const config = require('config');
-const mongoose = require('mongoose');
-var bodyParser = require('body-parser');
+const sequelize = require('./db');
+const models = require('./models/models');
+const cors = require('cors');
 
-
-const jsonParser = bodyParser.json()
-
+const PORT = config.get("port") || 5000;
 
 const app = express();
 
-app.use('/api/auth',jsonParser, require('./routes/auth.routes'))
-app.use('/api/product',jsonParser,  require('./routes/product.routes')) 
+app.use(cors());
+app.use(express.json());
 
-const PORT = config.get('port') || 5000;
+app.get('/', (req, res) => {
+    res.status(200).json({message: 'test'})
+})
 
-async function start(){
-    try{
-        await mongoose.connect(config.get('mongoUri'), {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            // useCreateIndex: true,
-        })
-    } catch(e){
-        console.log("Server Error", e.message);
-        process.exit(1);
+
+const start = async () => {
+    try {
+        await sequelize.authenticate();
+        await sequelize.sync();
+        app.listen(PORT, () => console.log('Server Started on ' + PORT));
+    } catch (error) {
+        console.log(error);
     }
 }
-
-
-app.listen(PORT, () => console.log('App startet on PORT ' + PORT));
-
-app.post("/someRoute", function(req, res) {
-    console.log(req.body);
-    res.send({ status: 'SUCCESS' });
-  });
-
 start();
+

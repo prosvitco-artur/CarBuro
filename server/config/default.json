@@ -1,5 +1,10 @@
 {
     "port": 5000,
-    "jwtSecret": "car-buro",
-    "mongoUri": "mongodb+srv://arturbabii08:2x-XQjs6JWM7GtS@cluster0.uubx3.mongodb.net/carBuro?retryWrites=true&w=majority"
+    "dbConfig": {
+        "host": "localhost",
+        "dbName": "car-buro",
+        "dbUser": "postgres",
+        "dbPassword": "root",
+        "dbPort": "5432"
+    }
 }
