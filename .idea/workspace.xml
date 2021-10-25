@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae812d72-0755-4241-85b4-93b51c1bf0b5" name="Changes" comment="Create Build Components">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Category/Category-nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Category/Category-nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ProductReduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProductReduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +76,7 @@
       <workItem from="1628019220495" duration="3409000" />
       <workItem from="1628277852825" duration="1948000" />
       <workItem from="1628281635629" duration="3929000" />
+      <workItem from="1635183280496" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="Create Build Components">
       <created>1627846118637</created>
