@@ -386,8 +386,7 @@ a {
     margin-top: 10px;
     width: 96px;
     border-radius: 20px;
-    appearance: none;
-    padding: 20px 26px 20px 20px;
+    padding: 20px;
 }
 .select_vehicle .box_select li{
     margin-bottom: 10px;
@@ -592,4 +591,38 @@ footer button{
 }
 .pointer_red:hover svg{
     fill: #F50500;
+}
+
+.scrolling{
+    height: 140px; /* высота нашего блока */
+width: 142px; /* ширина нашего блока */
+background: #fff; /* цвет фона, белый */
+border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+overflow-x: scroll; /* прокрутка по горизонтали */
+overflow-y: scroll; /* прокрутка по вертикали */
+}
+.scrolling p{
+    margin-bottom: 10px;
+}
+
+.scrolling::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Track */
+.scrolling::-webkit-scrollbar-track { 
+
+}
+   
+  /* Handle */
+.scrolling::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+    height: 10px;
+}
+  
+  /* Handle on hover */
+.scrolling::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
 }
