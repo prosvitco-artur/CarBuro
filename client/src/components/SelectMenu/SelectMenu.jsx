@@ -11,45 +11,46 @@ const SelectMenu = (props) => {
             <div className="float_left radius_50 background_grey select ">
                 <span>Year</span>
                 <VectorLang />
-                <div className="box_shadow_4 background_white box_select scrolling">
-                    <p className="pointer_red">2021</p>
-                    <p className="pointer_red">2020</p>
-                    <p className="pointer_red">2019</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2021</p>
-                    <p className="pointer_red">2020</p>
-                    <p className="pointer_red">2019</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2021</p>
-                    <p className="pointer_red">2020</p>
-                    <p className="pointer_red">2019</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                    <p className="pointer_red">2018</p>
-                </div>
-            </div>
+                <div className="box_select box_shadow_4 background_white">
+                    <div className="  scrolling">
+                        <p className="pointer_red">2021</p>
+                        <p className="pointer_red">2020</p>
+                        <p className="pointer_red">2019</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2021</p>
+                        <p className="pointer_red">2020</p>
+                        <p className="pointer_red">2019</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2021</p>
+                        <p className="pointer_red">2020</p>
+                        <p className="pointer_red">2019</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                        <p className="pointer_red">2018</p>
+                    </div>
+                </div></div>
             <div className="float_left radius_50 background_grey select">
                 <span>Year</span>
                 <VectorLang />
