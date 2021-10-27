@@ -1,4 +1,5 @@
 const sequelize = require("../db");
+const sequelizeHierarchy = require('sequelize-hierarchy');
 const { DataTypes } = require('sequelize');
 
 const User = sequelize.define('user', {
@@ -22,11 +23,6 @@ const Product = sequelize.define('product', {
     price: { type: DataTypes.INTEGER, allowNull: false },
     rating: { type: DataTypes.INTEGER, defaultValue: 0 },
     img: { type: DataTypes.STRING, allowNull: false },
-})
-
-const Type = sequelize.define('type', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    name: { type: DataTypes.STRING, unique: true, allowNull: false },
 })
 
 const Category = sequelize.define('category', {
@@ -68,11 +64,12 @@ ProductInfo.belongsTo(Product);
 User.hasMany(Rating);
 Rating.belongsTo(User);
 
-Type.hasMany(Category);
-Category.belongsTo(Type);
 
 Product.hasMany(Rating);
 Rating.belongsTo(Product);
+
+
+Category.isHierarchy();
 
 Category.hasMany(Product);
 Product.belongsTo(Category);
@@ -80,18 +77,17 @@ Product.belongsTo(Category);
 Brand.hasMany(Product);
 Product.belongsTo(Brand);
 
-Brand.belongsToMany(Category, {through: CategoryBrand });
-Category.belongsTo(Brand, {through: CategoryBrand } );
+Brand.belongsToMany(Category, { through: CategoryBrand });
+Category.belongsTo(Brand, { through: CategoryBrand });
 
 module.exports = {
     User,
-    Basket, 
-    BasketProduct, 
-    Product, 
-    Type, 
-    Category, 
-    Brand, 
-    Rating, 
-    ProductInfo, 
+    Basket,
+    BasketProduct,
+    Product,
+    Category,
+    Brand,
+    Rating,
+    ProductInfo,
     CategoryBrand
 }
