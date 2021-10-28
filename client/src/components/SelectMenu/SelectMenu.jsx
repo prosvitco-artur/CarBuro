@@ -12,7 +12,7 @@ const SelectMenu = (props) => {
                 <span>Year</span>
                 <VectorLang />
                 <div className="box_select box_shadow_4 background_white">
-                    <div className="  scrolling">
+                    <div className="scrolling">
                         <p className="pointer_red">2021</p>
                         <p className="pointer_red">2020</p>
                         <p className="pointer_red">2019</p>

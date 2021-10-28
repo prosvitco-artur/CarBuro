@@ -1,6 +1,7 @@
 const {Sequelize} = require('sequelize');
-const config = require('config');
-
+require('sequelize-hierarchy')(Sequelize);
+const config = require('config'); 
+ 
 module.exports = new Sequelize(
     config.get('dbConfig.dbName'),
     config.get('dbConfig.dbUser'),
