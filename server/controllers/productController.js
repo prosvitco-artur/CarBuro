@@ -13,10 +13,33 @@ class ProductController{
         return res.json({device});
     }
     async get(req, res){
-
+        const {id} = req.params;
+        const product = await Product.findOne({ where: { id } })
+        return res.json({product});
     }
     async getAll(req, res){
 
+        let {categoryID, brandId, limit, page } = req.query;
+
+        page = page || 1;
+        limit = limit || 9;
+        let offset = page * limit - limit;
+
+        let products;
+        if(!categoryID && !brandId){
+            products = await Product.findAll({limit, offset});
+        }
+        if(categoryID && !brandId){
+            products = await Product.findAll({ where:{categoryID}, limit, offset});
+        }
+        if(!categoryID && brandId){
+            products = await Product.findAll({ where:{brandId}, limit, offset});
+        }
+        if(categoryID && brandId){
+            products = await Product.findAll({ where:{categoryID, brandId}, limit, offset});
+        }
+
+        return res.json({products});
     }
     async delete(req, res){
 
