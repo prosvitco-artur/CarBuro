@@ -1,9 +1,9 @@
 import React from "react";
-import {ReactComponent as VectorLang} from '../common/img/icon/vector_language.svg';
+import {ReactComponent as VectorLang} from '../../common/img/icon/vector_language.svg';
 import { NavLink } from 'react-router-dom';
 
 
-const Header = (props) => {
+const NavBar = (props) => {
     return (
         <div className="box_shadow_4">
             <div className="container nav_menu">
@@ -35,4 +35,4 @@ const Header = (props) => {
     )
 }
 
-export default Header;
+export default NavBar;

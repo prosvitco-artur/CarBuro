@@ -1,11 +1,10 @@
-// import logo from '../common/img/icon/Logo.svg'
-import {ReactComponent as AutoBurotLogo} from '../common/img/icon/Logo.svg';
-import {ReactComponent as MenuLink} from '../common/img/icon/menu.svg';
-import {ReactComponent as SearchButton} from '../common/img/icon/search.svg';
-import {ReactComponent as SignInIcon} from '../common/img/icon/signInIcon.svg';
-import {ReactComponent as GarageIcon} from '../common/img/icon/GarageIcon.svg';
-import {ReactComponent as LikeItIcon} from '../common/img/icon/LikeItProduct.svg';
-import {ReactComponent as CartIcon} from '../common/img/icon/CartIcon.svg';
+import {ReactComponent as AutoBurotLogo} from '../../common/img/icon/Logo.svg';
+import {ReactComponent as MenuLink} from '../../common/img/icon/menu.svg';
+import {ReactComponent as SearchButton} from '../../common/img/icon/search.svg';
+import {ReactComponent as SignInIcon} from '../../common/img/icon/signInIcon.svg';
+import {ReactComponent as GarageIcon} from '../../common/img/icon/GarageIcon.svg';
+import {ReactComponent as LikeItIcon} from '../../common/img/icon/LikeItProduct.svg';
+import {ReactComponent as CartIcon} from '../../common/img/icon/CartIcon.svg';
 import {NavLink} from "react-router-dom";
 
 const Sidebar = (props) => {
