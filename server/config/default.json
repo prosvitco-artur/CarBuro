@@ -6,5 +6,6 @@
         "dbUser": "postgres",
         "dbPassword": "root",
         "dbPort": "5432"
-    }
+    },
+    "jwtSecretKey": "car-buro"
 }
