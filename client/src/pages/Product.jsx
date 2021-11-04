@@ -1,8 +1,8 @@
-import CartComponent from '../prototype/PoductCart';
-import Rainbow from '../../common/img/rainbow.png'
-import WheelsTires from '../../common/img/category/2cd43b_8c0bc0e07d0a4eaa8a68bc1c3c2d68b0_mv2 1.png';
-import ProductEvaluation from '../prototype/ProductReting';
-import InfoBox from '../prototype/InfoBox';
+import CartComponent from '../components/prototype/PoductCart';
+import Rainbow from '../common/img/rainbow.png'
+import WheelsTires from '../common/img/category/2cd43b_8c0bc0e07d0a4eaa8a68bc1c3c2d68b0_mv2 1.png';
+import ProductEvaluation from '../components/prototype/ProductReting';
+import InfoBox from '../components/prototype/InfoBox';
 
 const ProductSingle = () => {
     return (

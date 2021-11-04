@@ -1,7 +1,4 @@
 import Disc from '../../common/img/disc.png'
-import Rainbow from '../../common/img/rainbow.png'
-import Wheel from '../../common/img/wheel.png'
-import Radiator from '../../common/img/radiator.png'
 import { NavLink } from 'react-router-dom'
 
 

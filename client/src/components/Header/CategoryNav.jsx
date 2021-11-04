@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { getProductCategory } from "../../redux/ProductReduser";
 import React, {useState} from "react";
 
 const CategoryNav = (props) => {
@@ -25,7 +24,7 @@ const CategoryNav = (props) => {
     return (
         <div>
             <div className="container category_menu rubik_regular background_white">
-                {Object.keys(props.categories).map(key => <a onClick = {()=>showCurrentCategory()}><span className="pointer_red">{key}</span></a>)}
+                {Object.keys(props.categories).map(key => <span key={key} onClick = {()=>showCurrentCategory()}><span className="pointer_red">{key}</span></span>)}
             </div>
             {category && 
             <div className="container cat-list grid grid_columns_6 grid_gap_30_20 rubik_regular">
@@ -38,7 +37,7 @@ const CategoryNav = (props) => {
 
 let CategoryTitle = (props) => {
     return (<NavLink to="/catalog">
-        <div className="item"><img src={props.image} alt={"Mirrors" + "test"} /><p>{props.name}</p></div>
+        <div className="item"><img src={props.image} alt="Mirrors"/><p>{props.name}</p></div>
     </NavLink>)
 }
 let mapStateToProps = (state) => {

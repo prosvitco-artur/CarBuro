@@ -1,5 +1,5 @@
 import Catalog from "./components/Catalog/Catalog";
-import ProductSingle from "./components/ProductSingle/ProductSingle";
+import Product from "./pages/Product";
 import Admin from "./pages/Admin";
 import Home from "./pages/Home";
 import { ADMIN_ROUTE, CATEGORY_ROUTE, HOME_ROUTE, PRODUCT_ROUTE } from "./utils/consts";
@@ -21,6 +21,6 @@ export const publicRoutes = [
     },
     {
         path: PRODUCT_ROUTE + '/:id',
-        Component: ProductSingle
+        Component: Product
     },
 ];

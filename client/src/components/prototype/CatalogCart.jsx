@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import SparkPlugs from '../../common/img/nessesary/spark-plugs.png';
 
 const CatalogCart = (props) => {
     return (
