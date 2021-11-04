@@ -241,7 +241,7 @@ a {
     cursor: pointer;
 }
 .language:hover{
-    /*box-shadow: 0 4px 4px rgb(0 0 0 / 6%);*/
+    box-shadow: 0 4px 4px rgb(0 0 0 / 6%);
 }
 .language:hover svg{
     fill: #F50500;
@@ -295,10 +295,10 @@ a {
     padding: 18px 0px 18px 0px;
     font-size: 17.4px;
 }
-.category_menu a{
+.category_menu span{
     margin-right: 42px;
 }
-.category_menu a:last-child{
+.category_menu span:last-child{
     margin: 0;
 }
 
