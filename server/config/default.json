@@ -1,10 +1,10 @@
 {
     "port": 5000,
     "dbConfig": {
-        "host": "localhost",
-        "dbName": "car-buro",
-        "dbUser": "postgres",
-        "dbPassword": "root",
+        "host": "34.123.64.170",
+        "dbName": "carburo",
+        "dbUser": "artur-admin",
+        "dbPassword": "08081996A",
         "dbPort": "5432"
     },
     "jwtSecretKey": "car-buro"
