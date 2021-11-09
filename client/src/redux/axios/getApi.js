@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
 let instance = axios.create({
-    baseURL: "http://car-buro/wp-json/myplugin/v1/",
+    baseURL: "http://localhost:5000/api/",
     withCredentials: true,
     headers: {
     }
@@ -14,4 +14,16 @@ export const getProduct = {
                 return response.data
             })
     },
+}
+
+export class ProductApi {
+    create(data) {
+
+    }
+}
+
+export const CategoryApiCreate = async (data) => {
+    return (
+        await instance.post("category/", data)
+    )
 }

@@ -4,7 +4,6 @@ let GET_PRODUCT_CATEGORY = 'GET_PRODUCT_CATEGORY';
 
 
 let initialState = {
-
     category: {
         "Interior": [
             {name: 'Mirrors', image: 'img/category/Headerpanels.jpg', id: 0},
