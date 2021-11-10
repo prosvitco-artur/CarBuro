@@ -2,8 +2,10 @@ import * as axios from 'axios';
 
 let instance = axios.create({
     baseURL: "http://localhost:5000/api/",
-    withCredentials: true,
+    // withCredentials: true,
     headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
     }
 })
 
@@ -24,6 +26,6 @@ export class ProductApi {
 
 export const CategoryApiCreate = async (data) => {
     return (
-        await instance.post("category/", data)
+        await instance.post("category", data)
     )
 }
