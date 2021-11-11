@@ -9,6 +9,15 @@ let instance = axios.create({
     }
 })
 
+// export class UserAPI {
+export const registerUser = ({ email, password, role = "USER" }) => {
+    return instance.post('/user/registration', { email, password, role })
+}
+export const loginUser = ({ email, password}) => {
+    return instance.post('/user/login', { email, password })
+}
+// }
+
 export const getProduct = {
     getProductCategory() {
         return instance.get("category")
