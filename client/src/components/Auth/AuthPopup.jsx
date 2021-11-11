@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { registerUser, loginUser } from "../../redux/axios/getApi";
+import { loginUser } from "../../redux/axios/getApi";
 
 export const Login = (props) => {
     return (
@@ -15,7 +15,7 @@ export const Login = (props) => {
                 }}
                 onSubmit={async (values) => {
                     let { status, data } = await loginUser(values);
-                    if (status == 200) {
+                    if (status === 200) {
                         console.log(data.token);
                     }
                 }}

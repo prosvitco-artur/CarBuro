@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import { Login } from "../components/Auth/AuthPopup";
-import Popup from "../components/Popup";
+import Modal from "react-modal";
 
 const Cart = () => {
 
-    const [showPopup, changeShowPopup] = useState('login');
+    const [isOpen, setIsOpen] = useState(true);
+
+    function toggleModal() {
+        setIsOpen(!isOpen);
+      }
 
     return (
-        <div>
-            {showPopup == 'login' && 
-            <Popup widthPopup={'270px'}>
+        <div
+       
+        >
+            <Modal  
+             isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="My dialog"widthPopup={'270px'}
+        // onAfterOpen={afterOpenModal}
+        >
                 <Login />
-            </Popup>}
-            {showPopup == 'register' && 
-            <Popup widthPopup={'270px'}>
-                <Login setShowRegister={changeShowPopup} />
-            </Popup>
-            }
+            </Modal>
         </div>
     )
 }
