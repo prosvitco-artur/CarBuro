@@ -29,10 +29,10 @@ const Sidebar = (props) => {
             </div>
             <div className="float_left account_bar text_center">
 
-                <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
+                <span className="rubik_regular size_14 list pointer_red">
                         <SignInIcon/>
                         <p>Sign in</p>
-                </NavLink>
+                </span>
 
                 <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
                         <GarageIcon/>

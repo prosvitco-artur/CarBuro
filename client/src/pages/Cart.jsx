@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Login } from "../components/Auth/AuthPopup";
+import Popup from "../components/Popup";
 
 const Cart = () => {
-    return(
+
+    const [showPopup, changeShowPopup] = useState('login');
+
+    return (
         <div>
-            Cart
-            <Login />
+            {showPopup == 'login' && 
+            <Popup widthPopup={'270px'}>
+                <Login />
+            </Popup>}
+            {showPopup == 'register' && 
+            <Popup widthPopup={'270px'}>
+                <Login setShowRegister={changeShowPopup} />
+            </Popup>
+            }
         </div>
     )
 }
