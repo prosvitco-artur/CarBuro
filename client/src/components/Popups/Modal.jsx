@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-modal";
-import {ReactComponent as Close} from '../../common/img/icon/CloseIcon.svg';
+import { connect } from "react-redux";
+import { ReactComponent as Close } from '../../common/img/icon/CloseIcon.svg';
+import { setCurrentModal } from '../../redux/GlobalReducer';
 import { Login } from "./Login";
 
-const ModalPopup = () => {
+const ModalPopup = ({ popup, setCurrentModal }) => {
 
     const customStyles = {
         content: {
@@ -17,31 +19,32 @@ const ModalPopup = () => {
             width: '470px'
         },
     };
-
-    const [isOpen, setIsOpen] = useState(true);
-
     const closeModal = () => {
-        setIsOpen(false);
-      }
-
-    function toggleModal() {
-        setIsOpen(!isOpen);
+        setCurrentModal(null);
     }
 
     return (
         <>
             <Modal
-                isOpen={isOpen}
-                onRequestClose={toggleModal}
-                contentLabel="My dialog" widthPopup={'270px'}
+                isOpen={popup ? true : false}
                 style={customStyles}
-                // onRequestClose={closeModal}
+                onRequestClose={closeModal}
             >
-                <Close onClick={closeModal} style={{float: 'right'}} />
-                <Login />
+                <Close
+                 onClick={closeModal} 
+                 style={{ float: 'right' }} />
+                <Login 
+                closeFunc={closeModal}
+                 />
             </Modal>
         </>
     )
 }
 
-export default ModalPopup;
+let mapStateToProps = (state) => {
+    return { popup: state.global.popup }
+}
+
+
+
+export default connect(mapStateToProps, { setCurrentModal })(ModalPopup)
