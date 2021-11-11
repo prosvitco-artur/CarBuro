@@ -2,10 +2,19 @@ import * as axios from 'axios';
 
 let instance = axios.create({
     baseURL: "http://localhost:5000/api/",
-    withCredentials: true,
+    // withCredentials: true,
     headers: {
     }
 })
+
+// export class UserAPI {
+export const registerUser = ({ email, password, role = "USER" }) => {
+    return instance.post('/user/registration', { email, password, role })
+}
+export const loginUser = ({ email, password}) => {
+    return instance.post('/user/login', { email, password })
+}
+// }
 
 export const getProduct = {
     getProductCategory() {

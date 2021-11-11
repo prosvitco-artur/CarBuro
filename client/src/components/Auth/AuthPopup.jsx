@@ -1,11 +1,12 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import { registerUser, loginUser } from "../../redux/axios/getApi";
 
 export const Login = (props) => {
     return (
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
+        <div id="myModal" className="modal">
+            <div className="modal-content">
+                <span className="close">&times;</span>
                 <p>Welcome</p>
                 <p>Sign in to continue</p>
                 <Formik
@@ -15,10 +16,10 @@ export const Login = (props) => {
                         rememberMe: false
                     }}
                     onSubmit={async (values) => {
-                        // await new Promise(
-                        //     CategoryApiCreate(values)
-                        // );
-                        alert(JSON.stringify(values, null, 2));
+                        let {status, data} = await loginUser(values);
+                        if(status == 200){
+                            console.log(data.token);
+                        }
                     }}
                 >
                     <Form>
@@ -34,7 +35,7 @@ export const Login = (props) => {
                                 <label className="font-size-10" htmlFor="rememberMe">Remember me</label>
                             </div>
                             <div className="float_right" style={{ textAlign: "right" }}>
-                            <a className="input-link font-size-10" href='#'>Forgot password?</a>
+                            <span className="input-link font-size-10" href='#'>Forgot password?</span>
                             </div>
                         </div>
 
