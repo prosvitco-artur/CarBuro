@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { connect } from "react-redux";
 import { ReactComponent as Close } from '../../common/img/icon/CloseIcon.svg';
 import { setCurrentModal } from '../../redux/GlobalReducer';
+import { ForgotPassword } from "./ForgotPassword";
 import { Login } from "./Login";
 
 const ModalPopup = ({ popup, setCurrentModal }) => {
@@ -33,9 +34,8 @@ const ModalPopup = ({ popup, setCurrentModal }) => {
                 <Close
                  onClick={closeModal} 
                  style={{ float: 'right' }} />
-                <Login 
-                closeFunc={closeModal}
-                 />
+                {popup === "login" && <Login closeFunc={closeModal} editModalContent={setCurrentModal} /> }
+                {popup === "forgotPassword" && <ForgotPassword  closeFunc={closeModal} /> }
             </Modal>
         </>
     )

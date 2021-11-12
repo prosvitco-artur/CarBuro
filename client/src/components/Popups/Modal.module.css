@@ -4,3 +4,21 @@
 .form div{
     width: 100%;
 }
+.form input[type=text]::-webkit-input-placeholder,
+.form input[type=number]::-webkit-input-placeholder,
+.form input[type=password]::-webkit-input-placeholder{
+    padding-left: 20px;
+}
+
+.form span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.forgottForm{
+    position: relative;
+}
+.forgottForm button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

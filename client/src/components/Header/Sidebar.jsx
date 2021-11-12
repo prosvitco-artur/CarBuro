@@ -34,10 +34,10 @@ const Sidebar = (props) => {
                 </button>
             </div>
             <div className="float_left account_bar text_center">
-                <span onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
+                <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
                     <SignInIcon />
                     <p>Sign in</p>
-                </span>
+                </a>
 
                 <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
                     <GarageIcon />

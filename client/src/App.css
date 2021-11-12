@@ -56,8 +56,6 @@ li{
 input[type=text],
 input[type=number],
 input[type=password]{
-    padding-left: 20px;
-    margin: 0;
     border: none;
     height: 40px;
     width: 100%;
@@ -106,6 +104,9 @@ a {
     font-family: RubikOne;
 }
 
+.size_12{
+    font-size: 12px;
+}
 .size_14{
     font-size: 14px;
 }
@@ -144,6 +145,9 @@ a {
 }
 .color_white{
     color: #FEFEFE;
+}
+.color_grey{
+    color: #858585;
 }
 .radius_50{
     border-radius: 50px;
@@ -254,6 +258,14 @@ button{
 
 .mg-b-10{
     margin-bottom: 10px;
+}
+.mg-b-20{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.mg-b-30{
+    margin-bottom: 30px;
+    display: inline-block;
 }
 .language_list:first-child{
     padding-top: 20px;
