@@ -5,6 +5,7 @@ import { ReactComponent as Close } from '../../common/img/icon/CloseIcon.svg';
 import { setCurrentModal } from '../../redux/GlobalReducer';
 import { ForgotPassword } from "./ForgotPassword";
 import { Login } from "./Login";
+import { Register } from "./Register";
 
 const ModalPopup = ({ popup, setCurrentModal }) => {
 
@@ -36,6 +37,7 @@ const ModalPopup = ({ popup, setCurrentModal }) => {
                  style={{ float: 'right' }} />
                 {popup === "login" && <Login closeFunc={closeModal} editModalContent={setCurrentModal} /> }
                 {popup === "forgotPassword" && <ForgotPassword  closeFunc={closeModal} /> }
+                {popup === "register" && <Register editModalContent={setCurrentModal} closeFunc={closeModal} /> }
             </Modal>
         </>
     )
