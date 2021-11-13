@@ -1,12 +1,25 @@
 import React from "react";
 import AddCategory from "../components/Admin/AddCategory";
+import { Button } from "../components/prototype/Button/Button";
 
 const Admin = () => {
-    return(
+    return (
         <div className="container">
-            <button className="background_red radius_50 height_50">add product</button>
-            <button className="background_red radius_50 height_50">add category</button>
-            <button className="background_red radius_50 height_50">add brand</button>
+            <Button
+                title={'add product'}
+                type={'red'}
+                classStyle={"right"}
+            />
+            <Button
+                title={'Add category'}
+                type={'red'}
+                classStyle={"right"}
+            />
+            <Button
+                title={'Add brand'}
+                type={'red'}
+                classStyle={"right"}
+            />
 
             <AddCategory />
         </div>

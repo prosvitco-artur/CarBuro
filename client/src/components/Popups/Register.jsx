@@ -6,8 +6,9 @@ import style from './Modal.module.css';
 import { ReactComponent as Instagram } from '../../common/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from '../../common/img/icon/twitter.svg';
 import { ReactComponent as Facebook } from '../../common/img/icon/facebook.svg';
+import { Button } from "../prototype/Button/Button";
 
-export const Register = ({editModalContent, closeFunc}) => {
+export const Register = ({ editModalContent, closeFunc }) => {
 
     return (
         <div className={style.form}>
@@ -28,7 +29,7 @@ export const Register = ({editModalContent, closeFunc}) => {
                     }
                 }}
             >
-                <Form style={{marginTop: "-17"}}>
+                <Form style={{ marginTop: "-17" }}>
                     <div className="float_left">
                         <label className="font-size-10" htmlFor="name">Name</label>
                         <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" id="name" name="name" type="text" placeholder="John Smith" />
@@ -42,7 +43,11 @@ export const Register = ({editModalContent, closeFunc}) => {
                         <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" id="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" type='password' />
                     </div>
                     <div className="text_center mg-b-30">
-                        <button className="background_red radius_50" type="submit">Sign up</button>
+                        <Button
+                            title={'Sign up'}
+                            type={'red'}
+                            classStyle={""}
+                        />
                     </div>
                 </Form>
             </Formik>
@@ -55,7 +60,7 @@ export const Register = ({editModalContent, closeFunc}) => {
                         <Facebook />
                     </li>
                 </ul>
-                <p className="color_grey size_12">Already have Account? <span onClick={()=> editModalContent('login')}>Sign in</span></p>
+                <p className="color_grey size_12">Already have Account? <span onClick={() => editModalContent('login')}>Sign in</span></p>
             </div>
         </div>
     )

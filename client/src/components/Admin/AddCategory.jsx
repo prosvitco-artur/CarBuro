@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form } from 'formik';
 import { CategoryApiCreate} from "../../redux/axios/getApi";
+import { Button } from "../prototype/Button/Button";
 
 const AddCategory = (props) => {
 
@@ -32,7 +33,11 @@ const AddCategory = (props) => {
                 <label htmlFor="brandId">brandId</label>
                 <Field className="background_grey box_shadow_4 radius_50 height_50 input" id="brandId" name="brandId" placeholder="brandId" />
             </div>
-            <button className="background_red radius_50 height_50" type ="submit">Submit</button>
+            <Button
+                 title={'Submit'}
+                 type={'red'}
+                 classStyle={""}
+            />
         </Form>
     </Formik>
     )

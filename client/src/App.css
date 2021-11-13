@@ -19,13 +19,6 @@
     font-weight: normal;
 }
 
-button,
-button:active,
-button:focus {
-    outline: none;
-    border: none;
-}
-
 input:active, :hover, :focus {
     outline: 0;
     outline-offset: 0;
@@ -159,12 +152,7 @@ a {
     height: 50px;
 }
 
-button{
-    padding: 11px 55px;
-    height: 40px;
-    width: 170px;
-    text-transform: uppercase;
-}
+
 
 .pointer_red{
     cursor: pointer;
@@ -212,13 +200,6 @@ button{
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
-.button_hover:hover{
-    background-color: #F50500;
-    color: #FEFEFE;
-}
-
-
-
 .nav{
     height: 190px;
 }
@@ -347,12 +328,7 @@ button{
     font-size: 24px;
     font-family: RubikOne;
 }
-.info_header button{
-    font-size: 14px;
-    color: #FEFEFE;
-    padding: 11px 30px;
-    height: 40px;
-}
+
 .select_vehicle{
     height: 40px;
     max-width: 910px;
@@ -362,13 +338,7 @@ button{
     background: #FEFEFE;
     padding: 30px;
 }
-.select_vehicle button{
-    font-size: 14px;
-    color: #FEFEFE;
-    padding: 11px 30px;
-    height: 40px;
-    width: 170px;
-}
+
 .select_vehicle div{
     margin-right: 10px;
 }
@@ -466,21 +436,13 @@ button{
     height: 330px;
     cursor: pointer;
 }
-.popular_product div:hover button{
-    display: block;
-    cursor: pointer;
-}
+
 
 .popular_product p{
     margin: 10px auto;
     max-width: 220px;
 }
-.popular_product button{
-    margin: 0 auto;
-    display: none;
-    width: 170px;
-    height: 40px;
-}
+
 .popular_product .price{
     font-weight: bold;
     font-size: 18px;
@@ -518,10 +480,7 @@ button{
     position: absolute;
     width: 90%;
 }
-.callback button{
-    height: 40px;
-    width: 170px;
-}
+
 .nessesary{
     margin-top: 150px;
 }

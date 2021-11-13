@@ -1,3 +1,5 @@
+import { Button } from "../prototype/Button/Button"
+
 const SubscribeBlock = () => {
     return (
         <div className="rubik_regular color_white callback">
@@ -8,7 +10,11 @@ const SubscribeBlock = () => {
                 </div>
                 <form className="float_right">
                     <input className="radius_50" placeholder="Enter email address" />
-                    <button className="background_red radius_50 pointer_red right">SUBSCRIBE</button>
+                    <Button
+                        title={'VIEW ALL'}
+                        type={'red'}
+                        classStyle={"right"}
+                    />
                 </form>
             </div>
         </div>

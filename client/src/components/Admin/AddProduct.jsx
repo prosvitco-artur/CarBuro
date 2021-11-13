@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Field, Form } from 'formik';
+import { Button } from "../prototype/Button/Button";
 
 const AddProduct = (props) => {
 
@@ -35,7 +36,11 @@ const AddProduct = (props) => {
                 <Field className="background_grey box_shadow_4 radius_50 height_50 input" id="brandId" name="brandId" placeholder="brandId" />
             </div>
 
-            <button className="background_red radius_50 height_50" type ="submit">Submit</button>
+            <Button
+                title={'submit'}
+                type={'red'}
+                classStyle={""}
+            />
         </Form>
     </Formik>
     )

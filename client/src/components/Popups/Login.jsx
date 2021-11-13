@@ -6,8 +6,9 @@ import style from './Modal.module.css';
 import { ReactComponent as Instagram } from '../../common/img/icon/instagram.svg';
 import { ReactComponent as Twitter } from '../../common/img/icon/twitter.svg';
 import { ReactComponent as Facebook } from '../../common/img/icon/facebook.svg';
+import { Button } from "../prototype/Button/Button";
 
-export const Login = ({editModalContent, closeFunc}) => {
+export const Login = ({ editModalContent, closeFunc }) => {
 
     return (
         <div className={style.form}>
@@ -29,7 +30,7 @@ export const Login = ({editModalContent, closeFunc}) => {
                     }
                 }}
             >
-                <Form style={{marginTop: "-17"}}>
+                <Form style={{ marginTop: "-17" }}>
                     <div className="float_left">
                         <label className="font-size-10" htmlFor="email">Email</label>
                         <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" id="email" name="email" type="text" placeholder="email@mail.com" />
@@ -43,12 +44,16 @@ export const Login = ({editModalContent, closeFunc}) => {
                         <div className="float_left" style={{ textAlign: "left" }}>
                             <Field id="rememberMe" name="rememberMe" type='checkbox' />
                             <label className="font-size-10" htmlFor="rememberMe">Remember me</label>
-                            <span className="input-link font-size-10 float_right" onClick={()=> editModalContent('forgotPassword')}>Forgot password?</span>
+                            <span className="input-link font-size-10 float_right" onClick={() => editModalContent('forgotPassword')}>Forgot password?</span>
                         </div>
                     </div>
 
                     <div className="text_center mg-b-30">
-                        <button className="background_red radius_50" type="submit">Sign in</button>
+                        <Button
+                            title={'Sign in'}
+                            type={'red'}
+                            classStyle={""}
+                        />
                     </div>
                 </Form>
             </Formik>
@@ -61,7 +66,7 @@ export const Login = ({editModalContent, closeFunc}) => {
                         <Facebook />
                     </li>
                 </ul>
-                <p className="color_grey size_12">Don’t have Account? <span onClick={()=> editModalContent('register')}>Sign up</span></p>
+                <p className="color_grey size_12">Don’t have Account? <span onClick={() => editModalContent('register')}>Sign up</span></p>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import Rainbow from '../../common/img/rainbow.png'
 import { ReactComponent as VectorRight } from '../../common/img/icon/vector_right.svg';
 import { ReactComponent as VectorLeft } from '../../common/img/icon/vector_left.svg';
 import CartComponent from '../prototype/PoductCart';
+import { Button } from '../prototype/Button/Button';
 
 const PopularProduct = (props) => {
   return (
@@ -35,7 +36,11 @@ const PopularProduct = (props) => {
         />
       </div>
       <div className="pagination text_center">
-        <button className="border_red radius_50 size_14 background_white button_hover button">VIEW ALL</button>
+        <Button
+          title={'VIEW ALL'}
+          type={'white'}
+          classStyle={""}
+        />
         <div className="float_right">
           <VectorLeft />
           <span>1</span>

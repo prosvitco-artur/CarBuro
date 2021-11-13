@@ -6,6 +6,7 @@ import {ReactComponent as Facebook} from '../common/img/icon/facebook.svg';
 import {ReactComponent as Mastercard} from '../common/img/icon/mastercard.svg';
 import {ReactComponent as Paypal} from '../common/img/icon/paypal.svg';
 import {ReactComponent as Visa} from '../common/img/icon/visa.svg';
+import { Button } from "./prototype/Button/Button";
 
 
 const Footer = () => {
@@ -85,7 +86,11 @@ const Footer = () => {
             <form className="float_right">
                 <p>Be first to receive exclusive promotions, updates and product announcements</p>
                 <input className="radius_50 background_grey" placeholder="Enter email address" />
-                <button className="background_red radius_50 pointer_red right">SUBSCRIBE</button>
+                <Button
+                 title={'subscribe'}
+                 type={'red'}
+                 classStyle={""}
+                />
             </form>
         </footer>
     )

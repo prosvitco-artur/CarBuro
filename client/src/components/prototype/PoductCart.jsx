@@ -1,5 +1,6 @@
 import Disc from '../../common/img/disc.png'
 import { NavLink } from 'react-router-dom'
+import { Button } from './Button/Button';
 
 
 const CartComponent = (props) => {
@@ -10,9 +11,12 @@ const CartComponent = (props) => {
         <p>{props.description}</p>
         <p className="cat">{props.category}</p>
         <p className="price color_red">${props.price}</p>
-        <button className="background_red radius_50 color_white">
-          ADD TO CART
-        </button>
+        <Button
+          title={'ADD TO CART'}
+          type={'red'}
+          classStyle={""}
+        />
+
       </div>
     </NavLink>
   )

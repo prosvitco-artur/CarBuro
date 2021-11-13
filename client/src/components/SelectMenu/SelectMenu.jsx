@@ -1,5 +1,6 @@
 
 import { ReactComponent as VectorLang } from '../../common/img/icon/vector_language.svg';
+import { Button } from '../prototype/Button/Button';
 
 const SelectMenu = (props) => {
     return (
@@ -65,7 +66,11 @@ const SelectMenu = (props) => {
                 <VectorLang />
             </div>
             <div className="float_left">
-                <button className="background_red radius_50 height_50">SELECT</button>
+                <Button
+                    title={'SELECT'}
+                    type={'red'}
+                    classStyle={""}
+                />
             </div>
         </div>
     )

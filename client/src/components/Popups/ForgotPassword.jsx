@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import { loginUser } from "../../redux/axios/getApi";
+import { Button } from "../prototype/Button/Button";
 import style from './Modal.module.css';
 
 export const ForgotPassword = (props) => {
@@ -23,7 +24,11 @@ export const ForgotPassword = (props) => {
             >
                 <Form className={style.forgottForm}>
                     <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" name="email" type="text" placeholder="email@mail.com" />
-                    <button className="background_red radius_50" type="submit">Sign in</button>
+                    <Button
+                        title={'Sign in'}
+                        type={'red'}
+                        classStyle={""}
+                    />
                 </Form>
             </Formik>
         </div>

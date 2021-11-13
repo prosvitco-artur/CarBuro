@@ -1,3 +1,4 @@
+import { Button } from "../prototype/Button/Button"
 import MarksCategory from "../prototype/MarksCategory"
 
 
@@ -44,7 +45,11 @@ const ShopByMakes = (props) => {
                 <MarksCategory />
                 <MarksCategory />
             </div>
-            <button className="pagination border_red radius_50 size_14 background_white button_hover button">VIEW ALL</button>
+            <Button
+                title={'VIEW ALL'}
+                type={'red'}
+                classStyle={""}
+            />
         </div>
     )
 }
