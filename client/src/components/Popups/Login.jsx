@@ -1,6 +1,5 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { loginUser } from "../../redux/axios/getApi";
 import style from './Modal.module.css';
 
 import { ReactComponent as Instagram } from '../../common/img/icon/instagram.svg';
@@ -8,7 +7,7 @@ import { ReactComponent as Twitter } from '../../common/img/icon/twitter.svg';
 import { ReactComponent as Facebook } from '../../common/img/icon/facebook.svg';
 import { Button } from "../prototype/Button/Button";
 
-export const Login = ({ editModalContent, closeFunc }) => {
+export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
 
     return (
         <div className={style.form}>
@@ -23,11 +22,14 @@ export const Login = ({ editModalContent, closeFunc }) => {
                     rememberMe: false
                 }}
                 onSubmit={async (values) => {
-                    let { status, data } = await loginUser(values);
-                    if (status === 200) {
-                        console.log(data.token);
-                        closeFunc();
-                    }
+                    console.log(values);
+                    let data = await loginFunc(values);
+                    console.log(data);
+                    // let { status, data } = await loginUser(values);
+                    // if (status === 200) {
+                    //     console.log(data.token);
+                    //     closeFunc();
+                    // }
                 }}
             >
                 <Form style={{ marginTop: "-17" }}>

@@ -28,7 +28,7 @@ class UserController {
         const token = genereteJwt(user.id, email, user.role);
         return res.json({token})
     }
-    async login(req, res) {
+    async login(req, res, next) {
         const { email, password } = req.body;
 
         const user = await User.findOne({ where: { email } });
@@ -38,7 +38,7 @@ class UserController {
 
         let comparePassword = bcrypt.compareSync(password, user.password);
         if(!comparePassword){
-            return next(ApiError.internal("bad password"));
+            return next(ApiError.internal(password + " " + " "+ user.password));
         }
         const token = genereteJwt(user.id, user.email, user.role);
         return res.json({token})

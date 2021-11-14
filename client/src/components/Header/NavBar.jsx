@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const NavBar = (props) => {
+    const isAdmin = true;
     return (
         <div className="box_shadow_4">
             <div className="container nav_menu">
@@ -13,6 +14,7 @@ const NavBar = (props) => {
                     <span className="rubik_regular size_14 info_list list">9:00 - 22:00</span>
                 </div>
                 <div style={{ marginRight: '23px', marginTop: '11px' }} className="float_left">
+                    {isAdmin && <NavLink to={"/admin"} className="rubik_regular size_14 info_list list pointer_red">Admin</NavLink>}
                     <NavLink to={"/home"} className="rubik_regular size_14 info_list list pointer_red">Home</NavLink>
                     <NavLink to={"/about"} className="rubik_regular size_14 info_list list pointer_red">About</NavLink>
                     <NavLink to={"/delivery"} className="rubik_regular size_14 info_list list pointer_red">Delivery</NavLink>

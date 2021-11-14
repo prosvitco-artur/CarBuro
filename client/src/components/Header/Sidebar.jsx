@@ -15,6 +15,8 @@ const Sidebar = (props) => {
         props.setCurrentModal(type);
     }
 
+    const isAuth = false;
+
     return (
         <div className="container side-bar">
             <div className="float_left">
@@ -34,10 +36,14 @@ const Sidebar = (props) => {
                 </button>
             </div>
             <div className="float_left account_bar text_center">
-                <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
+                 {isAuth ? 
+                 <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
                     <SignInIcon />
                     <p>Sign in</p>
-                </a>
+                </a> : <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
+                    <SignInIcon />
+                    <p>Sign out</p>
+                </a> }
 
                 <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
                     <GarageIcon />

@@ -1,6 +1,5 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { loginUser } from "../../redux/axios/getApi";
 import { Button } from "../prototype/Button/Button";
 import style from './Modal.module.css';
 
@@ -16,7 +15,7 @@ export const ForgotPassword = (props) => {
                     email: '',
                 }}
                 onSubmit={async (values) => {
-                    let { status, data } = await loginUser(values);
+                    let { status, data } = await (values);
                     if (status === 200) {
                         console.log(data.token);
                     }
