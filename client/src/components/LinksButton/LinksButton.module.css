@@ -1,0 +1,9 @@
+.button,
+.button:active,
+.button:focus {
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: #FEFEFE;
+    width: 70px;
+}

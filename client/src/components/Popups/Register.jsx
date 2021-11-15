@@ -21,9 +21,7 @@ export const Register = ({ editModalContent, closeFunc, registerFunc }) => {
                     password: '',
                 }}
                 onSubmit={async (values) => {
-                    console.log(values);
                     let data = await registerFunc(values);
-                    console.log(data);
                 }}
             >
                 <Form style={{ marginTop: "-17" }}>

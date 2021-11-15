@@ -22,12 +22,9 @@ export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
                     rememberMe: false
                 }}
                 onSubmit={async (values) => {
-                    console.log(values);
                     let data = await loginFunc(values);
-                    console.log(data);
                     // let { status, data } = await loginUser(values);
                     // if (status === 200) {
-                    //     console.log(data.token);
                     //     closeFunc();
                     // }
                 }}

@@ -17,7 +17,6 @@ export const ForgotPassword = (props) => {
                 onSubmit={async (values) => {
                     let { status, data } = await (values);
                     if (status === 200) {
-                        console.log(data.token);
                     }
                 }}
             >

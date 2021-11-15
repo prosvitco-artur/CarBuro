@@ -106,10 +106,6 @@ a {
 .size_18{
     font-size: 18px;
 }
-.list:last-child{
-    margin: 0px!important;
-}
-
 .float_left{
     float: left;
 }
@@ -259,9 +255,6 @@ a {
 
 .site_search{
     position: relative;
-    width: 670px;
-    margin-right: 23px;
-    margin-left: 30px;
 }
 .side-bar .input{
     padding: 16px 70px 16px 70px;
@@ -272,23 +265,9 @@ a {
     margin-top: 5px;
 }
 .account_bar{
-    overflow:hidden;
-    white-space:nowrap;
+    display: flex;
 }
 
-.account_bar{
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.account_bar a{
-    max-width:40px;
-    display:inline-block;
-    margin-right: 35px;
-}
-.account_bar a:last-child{
-    margin-right: 0px;
-}
 .category_menu{
     padding: 18px 0px 18px 0px;
     font-size: 17.4px;

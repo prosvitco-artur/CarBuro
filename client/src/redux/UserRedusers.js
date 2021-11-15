@@ -36,7 +36,6 @@ export const loginDispatch = (UserData) => async (dispatch) => {
     if (response.data.resultCode === 0) {
         dispatch(setUserIsAuth(true))
     } else {
-        console.log(response)
     }
 }
 export const registerDispatch = (UserData) => async (dispatch) => {
@@ -44,6 +43,5 @@ export const registerDispatch = (UserData) => async (dispatch) => {
     if (response.data.resultCode === 0) {
         dispatch(setUserIsAuth(true))
     } else {
-        console.log(response)
     }
 }

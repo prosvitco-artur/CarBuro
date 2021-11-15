@@ -8,6 +8,7 @@ import { ReactComponent as CartIcon } from '../../common/img/icon/CartIcon.svg';
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { setCurrentModal } from '../../redux/GlobalReducer';
+import LinckIcon from '../LinksButton/LinksIcon';
 
 const Sidebar = (props) => {
 
@@ -15,7 +16,7 @@ const Sidebar = (props) => {
         props.setCurrentModal(type);
     }
 
-    const isAuth = false;
+    const isAuth = true;
 
     return (
         <div className="container side-bar">
@@ -36,28 +37,18 @@ const Sidebar = (props) => {
                 </button>
             </div>
             <div className="float_left account_bar text_center">
-                 {isAuth ? 
-                 <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
+                <LinckIcon type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
                     <SignInIcon />
-                    <p>Sign in</p>
-                </a> : <a onClick={() => setSignInPopup('login')} className="rubik_regular size_14 list pointer_red">
-                    <SignInIcon />
-                    <p>Sign out</p>
-                </a> }
-
-                <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
+                </LinckIcon>
+                <LinckIcon linckAction={'/admin'} type={'link'} title={"Garage"}>
                     <GarageIcon />
-                    <p>Garage</p>
-                </NavLink>
-
-                <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
+                </LinckIcon>
+                <LinckIcon linckAction={'/'} type={'button'} title={"$3042"}>
                     <LikeItIcon />
-                    <p>$3042</p>
-                </NavLink>
-                <NavLink to={'/'} className="rubik_regular size_14 list pointer_red">
+                </LinckIcon>
+                <LinckIcon linckAction={'/'} type={'link'} title={"$1010"}>
                     <CartIcon />
-                    <p>$1010</p>
-                </NavLink>
+                </LinckIcon>
             </div>
         </div>
     )
@@ -67,4 +58,4 @@ let mapStateToProps = (state) => {
     return { popup: state.global.popup }
 }
 
-export default connect(mapStateToProps, {setCurrentModal})(Sidebar)
+export default connect(mapStateToProps, { setCurrentModal })(Sidebar)
