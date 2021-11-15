@@ -1,9 +1,12 @@
 import React from "react";
-import { ReactComponent as VectorLang } from '../../common/img/icon/vector_language.svg';
 import { NavLink } from 'react-router-dom';
+import SelectLanguages from "../prototype/SelectLanguages/SelectLanguages";
+import { connect } from "react-redux";
+import { editCurrentLanguages } from '../../redux/GlobalReducer';
 
 
 const NavBar = (props) => {
+
     const isAdmin = true;
     return (
         <div className="box_shadow_4">
@@ -21,10 +24,11 @@ const NavBar = (props) => {
                     <NavLink to={"/contacts"} className="rubik_regular size_14 info_list list pointer_red">Contacts</NavLink>
                     <NavLink to={"/help"} className="rubik_regular size_14 info_list list pointer_red">Help</NavLink>
                 </div>
+                <SelectLanguages allCurrentLang={props.languages} editLang={editCurrentLanguages} currentData={0} />
                 {/* <div className="float_left language">
                     <div className="rubik_regular size_14">
                         EN
-                        <VectorLang />
+                        <VectorOpen />
                     </div>
                     <ul className="box_shadow_4 background_white">
                         <li className="rubik_regular size_14 text_center language_list pointer_red">UA</li>
@@ -36,5 +40,11 @@ const NavBar = (props) => {
         </div>
     )
 }
+let mapStateToProps = (state) => {
+    return {
+        currentLanguages: state.global.currentLanguages,
+        languages: state.global.languages
+    }
+}
 
-export default NavBar;
+export default connect(mapStateToProps, { editCurrentLanguages })(NavBar);

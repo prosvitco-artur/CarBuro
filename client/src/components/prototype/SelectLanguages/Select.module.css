@@ -1,0 +1,19 @@
+.select_vehicle .select span{
+    margin-left: 20px;
+}
+.select_vehicle .select img{
+    margin-top: 5px;
+}
+.select:hover .box_select{
+    display: block;
+}
+.select_vehicle .box_select{
+    /* display: none; */
+    margin-top: 30px;
+    width: 90px;
+    border-radius: 20px;
+    padding: 20px 26px 20px 20px;
+}
+.select_vehicle .box_select li{
+    margin-bottom: 10px;
+}
