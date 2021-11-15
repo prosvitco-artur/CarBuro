@@ -24,18 +24,17 @@ const NavBar = (props) => {
                     <NavLink to={"/contacts"} className="rubik_regular size_14 info_list list pointer_red">Contacts</NavLink>
                     <NavLink to={"/help"} className="rubik_regular size_14 info_list list pointer_red">Help</NavLink>
                 </div>
-                <SelectLanguages allCurrentLang={props.languages} editLang={editCurrentLanguages} currentData={0} />
-                {/* <div className="float_left language">
+                <SelectLanguages allCurrentLang={props.languages} editLang={props.editCurrentLanguages} currentData={props.currentLanguages} />
+                <div className="float_left language">
                     <div className="rubik_regular size_14">
                         EN
-                        <VectorOpen />
                     </div>
                     <ul className="box_shadow_4 background_white">
                         <li className="rubik_regular size_14 text_center language_list pointer_red">UA</li>
                         <li className="rubik_regular size_14 text_center language_list pointer_red">RU</li>
                         <li className="rubik_regular size_14 text_center language_list pointer_red">DE</li>
                     </ul>
-                </div> */}
+                </div>
             </div>
         </div>
     )

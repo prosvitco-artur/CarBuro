@@ -13,7 +13,6 @@ const SelectMenu = (props) => {
             <div className="float_left radius_50 background_grey select">
                 <span>Year</span>
                 <VectorLang />
-
             </div>
             <div className="float_left radius_50 background_grey select">
                 <span>Year</span>

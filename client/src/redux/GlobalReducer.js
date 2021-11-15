@@ -4,24 +4,22 @@ const TOGGLE_CURRENT_LANGUAGES  = 'TOGGLE_CURRENT_LANGUAGES';
 let initialState = {
     popup: null,
     languages: ['EN', 'UA', 'RU', 'DE'],
-    currentLanguages: 0
+    currentLanguages: 0,
 }
 
 const globalReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
-
+        
         case TOGGLE_MODAL: {
             return {
                 ...state,
-                popup: action.current,
+                popup: action.payload,
             };
         }
         case TOGGLE_CURRENT_LANGUAGES: {
-            debugger
             return {
                 ...state,
-                currentLanguages: action.current,
+                currentLanguages: action.payload,
             };
         }
         default:
@@ -32,14 +30,14 @@ const globalReducer = (state = initialState, action) => {
 export const setCurrentModal = (current) => {
     return {
         type: TOGGLE_MODAL,
-        current
+        payload :current
     }
 }
 export const editCurrentLanguages = (current) => {
-    debugger
+    
     return {
         type: TOGGLE_CURRENT_LANGUAGES,
-        current
+        payload :current
     }
 }
 
