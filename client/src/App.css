@@ -487,6 +487,9 @@ footer input{
 .mgt10{
     margin-top: 10px;
 }
+.mgt5{
+    margin-top: 5px;
+}
 
 .pointer_red svg {
     fill:#2C2C2C;

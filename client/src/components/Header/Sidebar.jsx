@@ -8,16 +8,19 @@ import { ReactComponent as CartIcon } from '../../common/img/icon/CartIcon.svg';
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { setCurrentModal } from '../../redux/GlobalReducer';
+import { setLogout } from '../../redux/UserReduser';
 import LinckIcon from '../LinksButton/LinksIcon';
-import { SignInBlock } from '../LinksButton/OnhoverBlocks';
+import { SignInBlock, LoginedBlock } from '../LinksButton/OnhoverBlocks';
 
 const Sidebar = (props) => {
-
+debugger
     const setSignInPopup = (type) => {
         props.setCurrentModal(type);
     }
 
-    const isAuth = true;
+    const setUserLogout = ()=> {
+        props.setLogout();
+    } 
 
     return (
         <div className="container side-bar">
@@ -39,7 +42,7 @@ const Sidebar = (props) => {
             </div>
             <div className="float_right account_bar text_center">
                 <LinckIcon icon={<SignInIcon />} type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
-                    <SignInBlock setCurrentModal={setSignInPopup} />
+                    {props.user.isAuth ? <LoginedBlock setUserLogout={setUserLogout} userName={props.user.userName}/> : <SignInBlock setCurrentModal={setSignInPopup} /> }
                 </LinckIcon>
                 {/*  */}
                 <LinckIcon icon={<GarageIcon />} linckAction={'/admin'} type={'link'} title={"Garage"}>
@@ -59,7 +62,10 @@ const Sidebar = (props) => {
 }
 
 let mapStateToProps = (state) => {
-    return { popup: state.global.popup }
+    return { 
+        popup: state.global.popup,
+        user: state.user
+    }
 }
 
-export default connect(mapStateToProps, { setCurrentModal })(Sidebar)
+export default connect(mapStateToProps, { setCurrentModal, setLogout })(Sidebar)

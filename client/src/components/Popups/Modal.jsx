@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { connect } from "react-redux";
 import { ReactComponent as Close } from '../../common/img/icon/CloseIcon.svg';
 import { setCurrentModal } from '../../redux/GlobalReducer';
-import { loginDispatch, registerDispatch } from '../../redux/UserRedusers';
+import { loginDispatch, registerDispatch } from '../../redux/UserReduser';
 import { ForgotPassword } from "./ForgotPassword";
 import { Login } from "./Login";
 import { Register } from "./Register";
