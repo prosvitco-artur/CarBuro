@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { setCurrentModal } from '../../redux/GlobalReducer';
 
 const Preloader = ({ preload }) => {
-    debugger
     const customStyles = {
         content: {
             top: '50%',

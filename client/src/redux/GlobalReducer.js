@@ -10,7 +10,6 @@ let initialState = {
 }
 
 const globalReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
 
         case TOGGLE_MODAL: {

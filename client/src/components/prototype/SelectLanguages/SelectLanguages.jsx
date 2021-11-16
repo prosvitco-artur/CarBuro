@@ -15,7 +15,7 @@ const Select = ({ currentData, allCurrentLang, editLang }) => {
     }
 
     return (
-        <div style={{marginTop: 4}} onClick={() => toogleOpen()} className={style.language + " size_14 float_left rubik_regular "}>
+        <div style={{marginTop: 4}} onClick={() => toogleOpen()} className={style.language + " size_14 float_right rubik_regular "}>
             <div className='pointer_red'>{allCurrentLang[currentData]}
             {isOpen ? <VectorClose style={vectorStyle} /> : <VectorOpen style={vectorStyle} />}
             </div>

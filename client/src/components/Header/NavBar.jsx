@@ -16,7 +16,7 @@ const NavBar = (props) => {
                     <span className="rubik_regular size_14 info_list list">(302) 555-0103</span>
                     <span className="rubik_regular size_14 info_list list">9:00 - 22:00</span>
                 </div>
-                <div className="float_left">
+                <div style={{marginLeft: '300px'}} className="float_left">
                     {isAdmin && <NavLink to={"/admin"} className="rubik_regular size_14 info_list list pointer_red">Admin</NavLink>}
                     <NavLink to={"/home"} className="rubik_regular size_14 info_list list pointer_red">Home</NavLink>
                     <NavLink to={"/about"} className="rubik_regular size_14 info_list list pointer_red">About</NavLink>

@@ -7,3 +7,6 @@
     margin-left: -20px;
     z-index: 9;
 }
+.language ul li{
+    padding: 5px;
+}

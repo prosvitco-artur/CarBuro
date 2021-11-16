@@ -201,7 +201,8 @@ a {
 }
 
 .nav_menu{
-    height: 40px;
+    height: 22px;
+    padding: 11px 0px;
 }
 .nav_menu div ul{
     width: 74px;
