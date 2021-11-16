@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { setCurrentModal } from '../../redux/GlobalReducer';
 import LinckIcon from '../LinksButton/LinksIcon';
+import { SignInBlock } from '../LinksButton/OnhoverBlocks';
 
 const Sidebar = (props) => {
 
@@ -37,17 +38,20 @@ const Sidebar = (props) => {
                 </button>
             </div>
             <div className="float_right account_bar text_center">
-                <LinckIcon type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
-                    <SignInIcon />
+                <LinckIcon icon={<SignInIcon />} type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
+                <SignInBlock />
                 </LinckIcon>
-                <LinckIcon linckAction={'/admin'} type={'link'} title={"Garage"}>
-                    <GarageIcon />
+                {/*  */}
+                <LinckIcon icon={<GarageIcon />} linckAction={'/admin'} type={'link'} title={"Garage"}>
+                    
                 </LinckIcon>
-                <LinckIcon linckAction={'/'} type={'button'} title={"$3042"}>
-                    <LikeItIcon />
+                {/*  */}
+                <LinckIcon icon={<LikeItIcon />} linckAction={'/'} type={'button'} title={"$3042"}>
+                    
                 </LinckIcon>
-                <LinckIcon linckAction={'/'} type={'link'} title={"$1010"}>
-                    <CartIcon />
+                {/*  */}
+                <LinckIcon icon={<CartIcon />} linckAction={'/'} type={'link'} title={"$1010"}>
+                    
                 </LinckIcon>
             </div>
         </div>

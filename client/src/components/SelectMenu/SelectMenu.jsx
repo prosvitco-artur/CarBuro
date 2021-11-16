@@ -14,7 +14,7 @@ const SelectMenu = (props) => {
             </div>
             <div style={{ padding: '11px 0' }} className="float_left size_14">Select vehicle</div>
 
-            <Selectel data={[1,2,3,4,5,6]} />
+            <Selectel />
             <Selectel />
             <Selectel />
             <Selectel />

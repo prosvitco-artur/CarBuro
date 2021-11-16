@@ -2,18 +2,21 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import style from './LinksButton.module.css';
 
-const LinckIcon = ({ type, linckAction, children, title }) => {
+const LinckIcon = ({ icon, type, linckAction, children, title }) => {
     if (type === 'button') {
         return (
-            <button onClick={() => linckAction('login')} className={style.button + " rubik_regular size_14 pointer_red"}>
+            <div>
+                <button onClick={() => linckAction('login')} className={style.button + " rubik_regular size_14 pointer_red"}>
+                    {icon}
+                    <p>{title}</p>
+                </button>
                 {children}
-                <p>{title}</p>
-            </button>
+            </div>
         )
     } else if (type === 'link') {
         return (
             <NavLink to={linckAction} className={style.button + " rubik_regular size_14 pointer_red"}>
-                {children}
+                {icon}
                 <p>$3042</p>
             </NavLink>
         )
