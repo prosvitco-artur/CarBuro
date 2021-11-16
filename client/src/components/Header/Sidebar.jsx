@@ -36,7 +36,7 @@ const Sidebar = (props) => {
                     <SearchButton />
                 </button>
             </div>
-            <div className="float_left account_bar text_center">
+            <div className="float_right account_bar text_center">
                 <LinckIcon type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
                     <SignInIcon />
                 </LinckIcon>

@@ -81,6 +81,9 @@ h2{
 .box_shadow_hover:hover{
     box-shadow: 0px 15px 20px 0px rgb(0 0 0/ 5%);
 }
+.opacity7{
+    opacity: 0.7;
+}
 
 .rubik_regular{
     font-family: RubikRegular;
@@ -308,57 +311,6 @@ a {
     font-size: 24px;
     font-family: RubikOne;
 }
-
-.select_vehicle{
-    height: 40px;
-    max-width: 910px;
-    margin: auto;
-    border-radius: 100px;
-    margin-top: -50px;
-    background: #FEFEFE;
-    padding: 30px;
-}
-
-.select_vehicle div{
-    margin-right: 10px;
-}
-.select_vehicle div:last-child{
-    margin-right: 0;
-}
-.select_vehicle select{
-    width: 140px;
-    height: 40px;
-    appearance: none;
-    /*background: url(img/icon/vector_language.svg) no-repeat right;*/
-    background-position-x: calc(100% - 25px);
-    padding-left: 20px;
-}
-.select_vehicle .select{
-    width: 115px;
-    height: 18px;
-    padding: 11px 25px 11px 0px;
-}
-.select_vehicle .select span{
-    margin-left: 20px;
-}
-.select_vehicle .select img{
-    margin-top: 5px;
-}
-
-.select:hover .box_select{
-    display: block;
-}
-.select_vehicle .box_select{
-    /* display: none; */
-    margin-top: 30px;
-    width: 90px;
-    border-radius: 20px;
-    padding: 20px 26px 20px 20px;
-}
-.select_vehicle .box_select li{
-    margin-bottom: 10px;
-}
-
 .shop_by_categories{
     margin-top: 150px;
 }
