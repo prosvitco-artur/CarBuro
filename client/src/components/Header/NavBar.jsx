@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import SelectLanguages from "../prototype/SelectLanguages/SelectLanguages";
 import { connect } from "react-redux";
-import { editCurrentLanguages } from '../../redux/GlobalReducer';
+import { changeUserLanguages } from '../../redux/GlobalReducer';
 
 
 const NavBar = (props) => {
@@ -24,17 +24,7 @@ const NavBar = (props) => {
                     <NavLink to={"/contacts"} className="rubik_regular size_14 info_list list pointer_red">Contacts</NavLink>
                     <NavLink to={"/help"} className="rubik_regular size_14 info_list list pointer_red">Help</NavLink>
                 </div>
-                <SelectLanguages allCurrentLang={props.languages} editLang={props.editCurrentLanguages} currentData={props.currentLanguages} />
-                <div className="float_left language">
-                    <div className="rubik_regular size_14">
-                        EN
-                    </div>
-                    <ul className="box_shadow_4 background_white">
-                        <li className="rubik_regular size_14 text_center language_list pointer_red">UA</li>
-                        <li className="rubik_regular size_14 text_center language_list pointer_red">RU</li>
-                        <li className="rubik_regular size_14 text_center language_list pointer_red">DE</li>
-                    </ul>
-                </div>
+                <SelectLanguages allCurrentLang={props.languages} editLang={props.changeUserLanguages} currentData={props.currentLanguages} />
             </div>
         </div>
     )
@@ -46,4 +36,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { editCurrentLanguages })(NavBar);
+export default connect(mapStateToProps, { changeUserLanguages })(NavBar);

@@ -15,18 +15,18 @@ const Select = ({ currentData, allCurrentLang, editLang }) => {
     }
 
     return (
-        <div onClick={() => toogleOpen()} className="rubik_regular">
-            <span className='pointer_red'>{allCurrentLang[currentData]}</span>
+        <div style={{marginTop: 4}} onClick={() => toogleOpen()} className={style.language + " size_14 float_left rubik_regular "}>
+            <div className='pointer_red'>{allCurrentLang[currentData]}
             {isOpen ? <VectorClose style={vectorStyle} /> : <VectorOpen style={vectorStyle} />}
-            {isOpen &&
-            <div className={style.box_select}>
-                <div className={style.scrolling}>
-                    {allCurrentLang.map((title, index) => ( currentData !== index && <p key={title} onClick={() => editLang(index)} className="pointer_red">{title}</p>))}
-                </div>
             </div>
+            {isOpen &&
+            <ul className="box_shadow_4 background_white">
+                    {allCurrentLang.map((title, index) => ( currentData !== index && <li key={title} onClick={() => editLang(index)} className="text_center language_list pointer_red">{title}</li>))}
+                
+            </ul>
             }
         </div>
     )
-}
+}                    
 
 export default Select;
