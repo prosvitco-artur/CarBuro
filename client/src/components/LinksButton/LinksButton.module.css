@@ -7,3 +7,17 @@
     background-color: #FEFEFE;
     width: 70px;
 }
+
+.linksIcon{
+    position: relative;
+}
+.linksIcon div{
+    position: absolute;
+    left: -90px;
+    width: 170px;
+    padding: 50px;
+    display: none;
+}
+.linksIcon:hover div{
+    display: block;
+}

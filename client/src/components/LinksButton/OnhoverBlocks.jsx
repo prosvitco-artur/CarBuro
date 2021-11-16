@@ -1,18 +1,21 @@
 import React from "react";
 import { Button } from "../prototype/Button/Button";
 
-export const SignInBlock = (props) => {
+export const SignInBlock = ({setCurrentModal}) => {
+
     return (
-        <div className="background_white text_center">
+        <div className="background_white text_center box_shadow_4 blockShow">
             <Button
-                title={'subscribe'}
+                title={'Sign in'}
                 type={'red'}
                 classStyle={""}
+                click={()=>setCurrentModal('login')}
             />
             <Button
-                title={'subscribe'}
+                title={'Sign up'}
                 type={'red'}
-                classStyle={""}
+                classStyle={"mgt10"}
+                click={()=>setCurrentModal('register')}
             />
         </div>
     )

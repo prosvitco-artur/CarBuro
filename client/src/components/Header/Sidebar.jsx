@@ -39,19 +39,19 @@ const Sidebar = (props) => {
             </div>
             <div className="float_right account_bar text_center">
                 <LinckIcon icon={<SignInIcon />} type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
-                <SignInBlock />
+                    <SignInBlock setCurrentModal={setSignInPopup} />
                 </LinckIcon>
                 {/*  */}
                 <LinckIcon icon={<GarageIcon />} linckAction={'/admin'} type={'link'} title={"Garage"}>
-                    
+
                 </LinckIcon>
                 {/*  */}
                 <LinckIcon icon={<LikeItIcon />} linckAction={'/'} type={'button'} title={"$3042"}>
-                    
+
                 </LinckIcon>
                 {/*  */}
                 <LinckIcon icon={<CartIcon />} linckAction={'/'} type={'link'} title={"$1010"}>
-                    
+
                 </LinckIcon>
             </div>
         </div>

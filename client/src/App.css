@@ -484,6 +484,9 @@ footer input{
     margin: auto 0;
     cursor: pointer;
 }
+.mgt10{
+    margin-top: 10px;
+}
 
 .pointer_red svg {
     fill:#2C2C2C;
