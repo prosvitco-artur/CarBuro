@@ -8,7 +8,7 @@ let initialState = {
     isAuth: true,
     userName: null,
     userEmail: null,
-    userRole: "USER"
+    userRole: "ADMIN"
 }
 
 export function userReduser(state = initialState, action) {
@@ -52,7 +52,7 @@ export const loginDispatch = (UserData) => async (dispatch) => {
     if (response.data.resultCode === 0) {
         dispatch(setUserIsAuth(true))
     } else {
-        
+
     }
 }
 export const registerDispatch = (UserData) => async (dispatch) => {

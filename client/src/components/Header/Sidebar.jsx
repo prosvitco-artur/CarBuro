@@ -13,7 +13,6 @@ import LinckIcon from '../LinksButton/LinksIcon';
 import { SignInBlock, LoginedBlock } from '../LinksButton/OnhoverBlocks';
 
 const Sidebar = (props) => {
-debugger
     const setSignInPopup = (type) => {
         props.setCurrentModal(type);
     }

@@ -1,29 +1,34 @@
 import React from "react";
+import { connect } from "react-redux";
 import AddCategory from "../components/Admin/AddCategory";
 import { Button } from "../components/prototype/Button/Button";
+import { setCurrentModal } from "../redux/GlobalReducer";
 
-const Admin = () => {
+const Admin = (props) => {
+    
+    const setSignInPopup = (type) => {
+        props.setCurrentModal(type);
+    }
+
     return (
-        <div className="container">
+        <div className="container" style={{height: '100px'}}>
+            <div>
             <Button
                 title={'add product'}
                 type={'red'}
-                classStyle={"right"}
+                classStyle={""}
+                click = {()=>setSignInPopup('login')}
             />
-            <Button
-                title={'Add category'}
-                type={'red'}
-                classStyle={"right"}
-            />
-            <Button
-                title={'Add brand'}
-                type={'red'}
-                classStyle={"right"}
-            />
-
-            <AddCategory />
+            </div>
         </div>
     )
 }
 
-export default Admin;
+let mapStateToProps = (state) => {
+    return{
+        global: state.global,
+        user: state.user,
+    }
+}
+
+export default connect(mapStateToProps, {setCurrentModal})(Admin);
