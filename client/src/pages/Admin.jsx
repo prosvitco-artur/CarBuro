@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import AddCategory from "../components/Admin/AddCategory";
 import { Button } from "../components/prototype/Button/Button";
 import { setCurrentModal } from "../redux/GlobalReducer";
 
@@ -11,15 +10,26 @@ const Admin = (props) => {
     }
 
     return (
-        <div className="container" style={{height: '100px'}}>
-            <div>
+        <div className="container" style={{height: '100px', display: 'flex', justifyContent: 'space-evenly'}}>
+            
             <Button
                 title={'add product'}
                 type={'red'}
                 classStyle={""}
-                click = {()=>setSignInPopup('login')}
+                click = {()=>setSignInPopup('add-product')}
             />
-            </div>
+            <Button
+                title={'add category'}
+                type={'red'}
+                classStyle={""}
+                click = {()=>setSignInPopup('add-category')}
+            />
+            <Button
+                title={'add category'}
+                type={'red'}
+                classStyle={""}
+                click = {()=>setSignInPopup('add-category')}
+            />
         </div>
     )
 }

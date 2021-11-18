@@ -4,11 +4,13 @@ import { connect } from "react-redux";
 import { ReactComponent as Close } from '../../common/img/icon/CloseIcon.svg';
 import { setCurrentModal } from '../../redux/GlobalReducer';
 import { loginDispatch, registerDispatch } from '../../redux/UserReduser';
+import AddCategory from "./AddCategory";
+import AddProduct from "./AddProduct";
 import { ForgotPassword } from "./ForgotPassword";
 import { Login } from "./Login";
 import { Register } from "./Register";
 
-const ModalPopup = ({ popup, setCurrentModal, ...props }) => {
+const ModalPopup = ({ popup, setCurrentModal, children, ...props }) => {
 
     const customStyles = {
         content: {
@@ -32,10 +34,14 @@ const ModalPopup = ({ popup, setCurrentModal, ...props }) => {
             style={customStyles}
             onRequestClose={closeModal}
             ariaHideApp={false}
-        > <Close onClick={closeModal} style={{ float: 'right' }} />
+        >
+            <Close onClick={closeModal} style={{ float: 'right' }} />
+            {children}
             {popup === "login" && <Login loginFunc={props.loginDispatch} closeFunc={closeModal} editModalContent={setCurrentModal} />}
             {popup === "forgotPassword" && <ForgotPassword closeFunc={closeModal} />}
             {popup === "register" && <Register registerFunc={props.registerDispatch} editModalContent={setCurrentModal} closeFunc={closeModal} />}
+            {popup === "add-product" && <AddProduct editModalContent={setCurrentModal} closeFunc={closeModal} />}
+            {popup === "add-category" && <AddCategory editModalContent={setCurrentModal} closeFunc={closeModal} />}
         </Modal>
 
     )
