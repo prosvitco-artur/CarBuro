@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "../prototype/Button/Button";
+import { ReactComponent as CarGarage } from '../../common/img/icon/car_garage.svg';
 
 export const SignInBlock = ({setCurrentModal}) => {
 
@@ -38,6 +39,21 @@ export const LoginedBlock = ({setUserLogout, userName}) => {
             <Button
                 title={'Sign out'}
                 type={'white'}
+                classStyle={"mgt10"}
+                click={()=>setUserLogout()}
+            />
+        </div>
+    )
+}
+
+export const GarageBlock = ({setUserLogout, userName}) => {
+
+    return (
+        <div className="background_white text_center box_shadow_4 blockShow">
+            <CarGarage />
+            <Button
+                title={'Add new vehicle'}
+                type={'red'}
                 classStyle={"mgt10"}
                 click={()=>setUserLogout()}
             />

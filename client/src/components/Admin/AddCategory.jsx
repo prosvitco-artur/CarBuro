@@ -4,9 +4,6 @@ import { CategoryApiCreate} from "../../redux/axios/getApi";
 import { Button } from "../prototype/Button/Button";
 
 const AddCategory = (props) => {
-
-    // const { name, parentName, brandId } = req.body;
-
     return (<Formik
         initialValues={{
             name: '',

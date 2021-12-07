@@ -10,16 +10,16 @@ import { NavLink } from "react-router-dom";
 import { setCurrentModal } from '../../redux/GlobalReducer';
 import { setLogout } from '../../redux/UserReduser';
 import LinckIcon from '../LinksButton/LinksIcon';
-import { SignInBlock, LoginedBlock } from '../LinksButton/OnhoverBlocks';
+import { SignInBlock, LoginedBlock, GarageBlock } from '../LinksButton/OnhoverBlocks';
 
 const Sidebar = (props) => {
     const setSignInPopup = (type) => {
         props.setCurrentModal(type);
     }
 
-    const setUserLogout = ()=> {
+    const setUserLogout = () => {
         props.setLogout();
-    } 
+    }
 
     return (
         <div className="container side-bar">
@@ -40,18 +40,34 @@ const Sidebar = (props) => {
                 </button>
             </div>
             <div className="float_right account_bar text_center">
-                <LinckIcon icon={<SignInIcon />} type={'button'} linckAction={setSignInPopup} title={"Sign in"}>
-                    {props.user.isAuth ? <LoginedBlock setUserLogout={setUserLogout} userName={props.user.userName}/> : <SignInBlock setCurrentModal={setSignInPopup} /> }
+                <LinckIcon icon={<SignInIcon />}
+                    type={'button'}
+                    linckAction={setSignInPopup}
+                    title={"Sign in"}
+                >
+                    {props.user.isAuth ?
+                        <LoginedBlock
+                            setUserLogout={setUserLogout}
+                            userName={props.user.userName}
+                        /> :
+                        <SignInBlock
+                            setCurrentModal={setSignInPopup}
+                        />}
                 </LinckIcon>
-                {/*  */}
-                <LinckIcon icon={<GarageIcon />} linckAction={'/admin'} type={'link'} title={"Garage"}>
-
+                <LinckIcon icon={<GarageIcon />}
+                    type={'button'}
+                    linckAction={setSignInPopup}
+                    title={"Garage"}
+                >
+                    <GarageBlock
+                        setUserLogout={setUserLogout}
+                        userName={props.user.userName}
+                    />
                 </LinckIcon>
-                {/*  */}
                 <LinckIcon icon={<LikeItIcon />} linckAction={'/'} type={'button'} title={"$3042"}>
 
                 </LinckIcon>
-                {/*  */}
+
                 <LinckIcon icon={<CartIcon />} linckAction={'/'} type={'link'} title={"$1010"}>
 
                 </LinckIcon>
@@ -61,7 +77,7 @@ const Sidebar = (props) => {
 }
 
 let mapStateToProps = (state) => {
-    return { 
+    return {
         popup: state.global.popup,
         user: state.user
     }

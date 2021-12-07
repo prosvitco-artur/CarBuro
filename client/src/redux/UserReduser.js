@@ -5,7 +5,7 @@ let SET_LOGOUT = 'SET_LOGOUT';
 let SET_CURRENT_USER = 'SET_CURRENT_USER';
 
 let initialState = {
-    isAuth: true,
+    isAuth: false,
     userName: null,
     userEmail: null,
     userRole: "ADMIN"
