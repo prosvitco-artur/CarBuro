@@ -11,9 +11,9 @@ const Selectel = ({ children, selectData }) => {
         changeOpen(!isOpen);
     }
 
-    let chengeCurrentData = (value) => {
-        setOption(value);
-    }
+    // let chengeCurrentData = (value) => {
+    //     setOption(value);
+    // }
 
     return (
         <div onClick={() => tooggleOpen()} className={isOpen ? 'background_white float_left radius_50 select box_shadow_4 ' : 'background_grey float_left radius_50 select opacity7'}>
