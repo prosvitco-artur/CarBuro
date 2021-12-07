@@ -1,7 +1,7 @@
 import React from "react";
 import style from './Button.module.css';
 
-export const Button = ({ title, type, click = null, classStyle }) => {
+export const Button = ({ title, type, click, classStyle }) => {
 
     let callBackClickFunk=()=> {
         click()

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory  } from "react-router-dom";
 import { Button } from "../prototype/Button/Button";
 import { ReactComponent as CarGarage } from '../../common/img/icon/car_garage.svg';
 
@@ -46,17 +46,33 @@ export const LoginedBlock = ({setUserLogout, userName}) => {
     )
 }
 
-export const GarageBlock = ({setUserLogout, userName}) => {
-
+export const GarageBlock = ({isAuth}) => {
+    const history = useHistory();
     return (
+        
         <div className="background_white text_center box_shadow_4 blockShow">
+            {isAuth ? <>
             <CarGarage />
             <Button
                 title={'Add new vehicle'}
                 type={'red'}
                 classStyle={"mgt10"}
-                click={()=>setUserLogout()}
+                // click={()=>setUserLogout()}
+            /></> :
+            <>
+            <Button
+                title={'Add new vehicle'}
+                type={'red'}
+                classStyle={"mgt10"}
+                // click={()=>setUserLogout()}
             />
+            <Button
+                title={'Add new vehicle'}
+                type={'red'}
+                classStyle={"mgt10"}
+                click={()=>history.push('admin')}
+            />
+            </>}
         </div>
     )
 }

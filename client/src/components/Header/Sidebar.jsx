@@ -61,7 +61,7 @@ const Sidebar = (props) => {
                 >
                     <GarageBlock
                         setUserLogout={setUserLogout}
-                        userName={props.user.userName}
+                        isAuth={props.user.isAuth}
                     />
                 </LinckIcon>
                 <LinckIcon icon={<LikeItIcon />} linckAction={'/'} type={'button'} title={"$3042"}>
@@ -77,6 +77,7 @@ const Sidebar = (props) => {
 }
 
 let mapStateToProps = (state) => {
+    console.log(state);
     return {
         popup: state.global.popup,
         user: state.user
