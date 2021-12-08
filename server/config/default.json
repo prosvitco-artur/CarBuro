@@ -1,9 +1,9 @@
 {
     "port": 5000,
     "dbConfig": {
-        "host": "34.123.64.170",
-        "dbName": "carburo",
-        "dbUser": "artur-admin",
+        "host": "cara-test.cfxwflbluhug.us-east-1.rds.amazonaws.com",
+        "dbName": "postgres",
+        "dbUser": "postgres",
         "dbPassword": "08081996A",
         "dbPort": "5432"
     },
