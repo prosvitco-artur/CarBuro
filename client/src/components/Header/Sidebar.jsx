@@ -77,7 +77,6 @@ const Sidebar = (props) => {
 }
 
 let mapStateToProps = (state) => {
-    console.log(state);
     return {
         popup: state.global.popup,
         user: state.user

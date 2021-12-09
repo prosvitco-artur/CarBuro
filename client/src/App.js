@@ -15,7 +15,6 @@ function App() {
       <ModalPopup />
       <Preloader />
     </BrowserRouter>
-
   );
 }
 

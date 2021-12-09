@@ -1,12 +1,11 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunkMiddleware from "redux-thunk";
 import globalReducer from "./GlobalReducer";
-// import { reducer as formReducer } from 'redux-form';
-import {product} from "./ProductReduser";
+import {CategoryReducer} from "./CategoryReduser";
 import { userReduser } from "./UserReduser";
 
 let reducers = combineReducers({
-    product,
+    categories: CategoryReducer,
     global: globalReducer,
     user: userReduser
 })

@@ -30,6 +30,15 @@ class CategoryController {
         const category = await Category.findAll();
         return res.json({ category });
     }
+    async getParent(req, res) {
+        let category;
+        if(req.query.parentId){
+            category = await Category.findAll({ where: { parentId: req.query.parentId } });
+        } else {
+            category = await Category.findAll({ where: { hierarchyLevel: 1 } });
+        }
+        return res.json({category});
+    }
     async delete(req, res) {
         const {name} = req.body;
         const category = await Category.destroy({ where: { name } });

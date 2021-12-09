@@ -33,6 +33,18 @@ export class ProductApi {
     }
 }
 
+export class Category {
+    getAll = async () => {
+        return await instance.get("category");
+    }
+    getAllFirst = async () => {
+        return await instance.get("category/parent");
+    }
+    getChild = async (parentID) => {
+        return await instance.get("category/?parentID="+parentID);
+    }
+}
+
 export const CategoryApiCreate = async (data) => {
     return (
         await instance.post("category", data)

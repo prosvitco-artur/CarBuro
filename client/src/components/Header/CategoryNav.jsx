@@ -1,16 +1,15 @@
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import React, {useState} from "react";
+import {setCategoryMenu} from '../../redux/CategoryReduser'
 
-const CategoryNav = (props) => {
-
-    
+const CategoryNav = ({categories}) => {
     let [category, setCategory] = useState();
     let [showingCat, setShowingCat] = useState(false);
 
-    const showCurrentCategory = () =>{
+    const showCurrentCategory = (key) =>{
         if(!showingCat){
-            setCategory(props.categories.Interior);
+            setCategory(categories.Interior);
             setShowingCat(true);
         } else {
             setCategory();
@@ -18,13 +17,10 @@ const CategoryNav = (props) => {
         } 
 
     }
-        
-
-
     return (
         <div>
             <div className="container category_menu rubik_regular background_white">
-                {Object.keys(props.categories).map(key => <span key={key} onClick = {()=>showCurrentCategory()}><span className="pointer_red">{key}</span></span>)}
+                {categories && categories.map(k => <span key={k.id} onClick = {()=>showCurrentCategory(k.id)}><span className="pointer_red">{k.name}</span></span>)}
             </div>
             {category && 
             <div className="container cat-list grid grid_columns_6 grid_gap_30_20 rubik_regular">
@@ -41,7 +37,7 @@ let CategoryTitle = (props) => {
     </NavLink>)
 }
 let mapStateToProps = (state) => {
-    return { categories: state.product.category }
+    return { categories: state.categories.category }
 }
 
-export default connect(mapStateToProps, null)(CategoryNav)
+export default connect(mapStateToProps, {setCategoryMenu})(CategoryNav)
