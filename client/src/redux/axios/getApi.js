@@ -40,8 +40,8 @@ export class Category {
     getAllFirst = async () => {
         return await instance.get("category/parent");
     }
-    getChild = async (parentID) => {
-        return await instance.get("category/?parentID="+parentID);
+    getChildCategory = async (parentID) => {
+        return await instance.get("category/parent/?parentId="+parentID);
     }
 }
 
