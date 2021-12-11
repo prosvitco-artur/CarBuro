@@ -1,5 +1,6 @@
 const { Category } = require("../models/models");
 const ApiError = require('../error/ApiError');
+const { Op } = require("sequelize");
 const uuid = require('uuid');
 const path = require('path');
 
@@ -21,7 +22,7 @@ class CategoryController {
     }
 
     async getAll(req, res) {
-        const category = await Category.findAll();
+        const category = await Category.findAll({hierarchy: true});
         return res.json({ category });
     }
     async getParent(req, res) {
@@ -29,7 +30,7 @@ class CategoryController {
         if (req.query.parentId) {
             category = await Category.findAll({ where: { parentId: req.query.parentId } });
         } else {
-            category = await Category.findAll({ where: { hierarchyLevel: 1 } });
+            category = await Category.findAll({ where: { [Op.or]: [{hierarchyLevel: 1}, {hierarchyLevel: 2}] }, hierarchy: true });
         }
         return res.json({ category });
     }
