@@ -1,6 +1,5 @@
-import {Category, getProduct} from "./axios/getApi";
+import {Category} from "./axios/getApi";
 
-let CREATE_NEW_CATEGORY = 'CREATE_NEW_CATEGORY';
 const LOAD_CATEGORY = 'LOAD_CATEGORY';
 
 

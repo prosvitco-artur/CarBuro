@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "../prototype/Button/Button";
 import style from './Modal.module.css';
 
-export const ForgotPassword = (props) => {
+export const ForgotPassword = () => {
     return (
         <div className={style.form}>
             <div className="text_center">
@@ -17,6 +17,7 @@ export const ForgotPassword = (props) => {
                 onSubmit={async (values) => {
                     let { status, data } = await (values);
                     if (status === 200) {
+                        console.log(data);
                     }
                 }}
             >

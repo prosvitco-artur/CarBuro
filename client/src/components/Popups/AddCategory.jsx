@@ -1,6 +1,5 @@
 import React from "react";
 import { Formik, Field, Form } from 'formik';
-import { CategoryApiCreate } from "../../redux/axios/getApi";
 import { Button } from "../prototype/Button/Button";
 
 import style from './Modal.module.css';
@@ -16,9 +15,6 @@ const AddCategory = (props) => {
                     brandId: '',
                 }}
                 onSubmit={async (values) => {
-                    // await new Promise(
-                    //     CategoryApiCreate(values)
-                    // );
                     alert(JSON.stringify(values, null, 2));
                 }}
             >

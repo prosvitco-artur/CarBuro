@@ -22,11 +22,10 @@ export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
                     rememberMe: false
                 }}
                 onSubmit={async (values) => {
-                    let data = await loginFunc(values);
-                    // let { status, data } = await loginUser(values);
-                    // if (status === 200) {
-                    //     closeFunc();
-                    // }
+                    let { status, data } = await loginFunc(values);
+                    if (status === 200) {
+                        console.log(data);
+                    }
                 }}
             >
                 <Form style={{ marginTop: "-17" }}>
