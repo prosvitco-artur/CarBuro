@@ -19,10 +19,7 @@ const CategoryNav = ({ categories }) => {
                     }
                 </span>)
                 }
-
             </div>
-
-
         </div >
     )
 }
