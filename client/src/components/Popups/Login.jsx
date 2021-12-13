@@ -8,7 +8,9 @@ import { ReactComponent as Facebook } from '../../common/img/icon/facebook.svg';
 import { Button } from "../prototype/Button/Button";
 
 export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
-
+let test = () => {
+    
+}
     return (
         <div className={style.form}>
             <div className="text_center">
@@ -51,6 +53,7 @@ export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
                             title={'Sign in'}
                             type={'red'}
                             classStyle={""}
+                            click={() =>test()}
                         />
                     </div>
                 </Form>

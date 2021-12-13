@@ -8,7 +8,7 @@ const genereteJwt = (id, email, role) => {
     return jsonwebtoken.sign(
         { id, email, role },
         config.get('jwtSecretKey'),
-        {expiresIn: '24h'}
+        { expiresIn: '24h' }
     );
 }
 
@@ -26,22 +26,26 @@ class UserController {
         const user = await User.create({ email, role, password: hashPassword });
         const basket = await Basket.create({ userId: user.id });
         const token = genereteJwt(user.id, email, user.role);
-        return res.json({token})
+        return res.json({ token })
     }
     async login(req, res, next) {
         const { email, password } = req.body;
 
+
         const user = await User.findOne({ where: { email } });
+
         if (!user) {
+            return res.json({ user })
             return next(ApiError.internal("Not found"));
         }
 
         let comparePassword = bcrypt.compareSync(password, user.password);
-        if(!comparePassword){
-            return next(ApiError.internal(password + " " + " "+ user.password));
+        if (!comparePassword) {
+            return next(ApiError.internal(password + " " + " " + user.password));
         }
         const token = genereteJwt(user.id, user.email, user.role);
-        return res.json({token})
+
+        return res.json({ token, role: user.role })
     }
     async auth(req, res, next) {
         const token = genereteJwt(req.user.id, req.user.email, req.user.role);

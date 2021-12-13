@@ -15,7 +15,7 @@ const NavBar = (props) => {
                     <span className="rubik_regular size_14 info_list list">9:00 - 22:00</span>
                 </div>
                 <div style={{marginLeft: '300px'}} className="float_left">
-                    {props.userRole === 'ADMIN' && <NavLink to={"/admin"} className="rubik_regular size_14 info_list list pointer_red">Admin</NavLink>}
+                    {props.isAuth && <NavLink to={"/admin"} className="rubik_regular size_14 info_list list pointer_red">Admin</NavLink>}
                     <NavLink to={"/home"} className="rubik_regular size_14 info_list list pointer_red">Home</NavLink>
                     <NavLink to={"/about"} className="rubik_regular size_14 info_list list pointer_red">About</NavLink>
                     <NavLink to={"/delivery"} className="rubik_regular size_14 info_list list pointer_red">Delivery</NavLink>
@@ -31,7 +31,7 @@ let mapStateToProps = (state) => {
     return {
         currentLanguages: state.global.currentLanguages,
         languages: state.global.languages,
-        userRole: state.user.userRole
+        isAuth: state.user.isAuth
     }
 }
 
