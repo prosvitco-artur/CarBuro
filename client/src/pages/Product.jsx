@@ -33,7 +33,7 @@ const ProductSingle = () => {
 
                 <div className="container rubik_regular">
                     <h2>Recently viewed products</h2>
-                    <div className="popular_product rubik_regular grid grid_columns_4 grid_gap_30 text_center">
+                    <div className="rubik_regular grid grid_columns_4 grid_gap_30 text_center">
 
                         <CartComponent
                             image={Rainbow}

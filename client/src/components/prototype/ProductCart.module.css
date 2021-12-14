@@ -1,0 +1,40 @@
+
+.popularProduct div:hover{
+    margin: 0px;
+    height: 330px;
+    cursor: pointer;
+    transition: height 0.5s;
+}
+.popularProduct p{
+    margin: 10px auto;
+    max-width: 220px;
+}
+.popularProduct .price{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+.popularProduct .cat{
+    color: grey;
+    margin-bottom: 10px;
+}
+.popularProduct div{
+    height: 292px;
+    padding-top: 10px;
+    margin-bottom: 38px;
+}
+.popularProduct button{
+    float: left;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-left: 50px;
+}
+.popularProduct .heartPlus{
+    padding: 8px 6px;
+    opacity: 0;
+}
+.popularProduct div:hover button,
+.popularProduct div:hover .heartPlus{
+    opacity: 1;
+}
