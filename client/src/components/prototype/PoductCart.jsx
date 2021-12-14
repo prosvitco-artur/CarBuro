@@ -8,7 +8,7 @@ import { ReactComponent as HeartPlus } from '../../common/img/icon/heartPlus.svg
 const CartComponent = (props) => {
   return (
     <NavLink className={s.popularProduct} to="item">
-      <div className="div box_shadow_4 box_shadow_hover size_14">
+      <div className="box_shadow_4 box_shadow_hover size_14">
         <img src={Disc} alt="disc" />
         <p>{props.description}</p>
         <p className={s.cat}>{props.category}</p>
