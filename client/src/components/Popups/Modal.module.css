@@ -22,3 +22,7 @@
     top: 0;
     right: 0;
 }
+.error{
+    color: brown;
+    float: right;
+}

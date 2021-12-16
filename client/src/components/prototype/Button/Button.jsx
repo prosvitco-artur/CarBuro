@@ -1,16 +1,10 @@
 import React from "react";
 import style from './Button.module.css';
 
-export const Button = ({ title, type, click, classStyle }) => {
-
-    let callBackClickFunk=()=> {
-        click()
-    }
-
-    var typeClasses = type === 'red' ? style.colorRed : style.colorWhite;
-
+export const Button = ({ title, classStyle, disabled=false }) => {
     return (
-        <button onClick={()=>callBackClickFunk()} className={typeClasses + " " + style.button + " " + classStyle}>
+        <button disabled={disabled}
+            className={style.button + " " + style.colorRed}>
             {title}
         </button>
     )
