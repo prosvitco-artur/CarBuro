@@ -5,7 +5,7 @@ import { Button } from "../prototype/Button/Button";
 const InfoBlock = (props) => {
   return (
     <div className="info_header">
-      <div className="container">
+      {/* <div className="container">
         <p className="give_your ruso_one">
           Give your car one more chance
         </p>
@@ -18,7 +18,7 @@ const InfoBlock = (props) => {
           type={'red'}
           classStyle={""}
         />
-      </div>
+      </div> */}
     </div>
   )
 }

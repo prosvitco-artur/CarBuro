@@ -11,7 +11,7 @@ import ToolsGarage from '../../common/img/category/imgbin_torx-set-tool-bit-sock
 const ShopByCategories = (props) => {
     return (
         <div className="shop_by_categories container">
-        <h2>Shop by Categories</h2>
+        {/* <h2>Shop by Categories</h2>
         <div className="rubik_regular grid grid_columns_4 grid_gap_30">
           <div className="grid_22 box_shadow_4 cat_item box_shadow_hover ">
             <div className="name_cat background_grey">
@@ -75,8 +75,8 @@ const ShopByCategories = (props) => {
                 alt='category' src={ToolsGarage} />
               <span>Tools & Garage</span>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div>*/}
       </div>
     )
 }

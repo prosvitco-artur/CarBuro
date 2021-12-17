@@ -9,7 +9,7 @@ import BrakePads from '../../common/img/nessesary/brake-pads.png';
 const NecessaryProducts = (props) => {
     return (
         <div className="nessesary container">
-            <h2>Nessesary for every vehicle</h2>
+            {/* <h2>Nessesary for every vehicle</h2>
             <div className="grid grid_columns_6 grid_gap_30 text_center rubik_regular">
                 <div className="nessesary_item box_shadow_4 box_shadow_hover size_14">
                     <img src={SparkPlugs} alt="spark-plugs"/>
@@ -35,7 +35,7 @@ const NecessaryProducts = (props) => {
                     <img src={BrakePads} alt="brake-pads"/>
                     <p>Brake pads</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

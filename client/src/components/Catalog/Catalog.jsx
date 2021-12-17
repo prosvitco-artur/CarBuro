@@ -1,15 +1,15 @@
 
 
-import CatalogCart from '../prototype/CatalogCart';
-import CartComponent from '../prototype/PoductCart';
-import Rainbow from '../../common/img/rainbow.png'
-import SparkPlugs from '../../common/img/nessesary/spark-plugs.png';
+// import CatalogCart from '../prototype/CatalogCart';
+// import CartComponent from '../prototype/PoductCart';
+// import Rainbow from '../../common/img/rainbow.png'
+// import SparkPlugs from '../../common/img/nessesary/spark-plugs.png';
 
 const Catalog = () => {
     return (
         <>
             <div className="nessesary container">
-                <div className="grid grid_columns_6 grid_gap_30 text_center rubik_regular">
+                {/* <div className="grid grid_columns_6 grid_gap_30 text_center rubik_regular">
                     <CatalogCart
                         image={SparkPlugs}
                         name={'Spark plugs'}
@@ -72,7 +72,7 @@ const Catalog = () => {
                         category={'Wiper blades'}
                         price={'235'}
                     />
-                </div>
+                </div> */}
             </div>
         </>
     );
