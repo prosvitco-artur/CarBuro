@@ -19,6 +19,8 @@ export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
         email: Yup.string()
             .required('Required')
             .email('Invalid email'),
+        password: Yup.string()
+            .required('Required'),
     });
 
     return (
@@ -47,12 +49,17 @@ export const Login = ({ editModalContent, closeFunc, loginFunc }) => {
                 {({ errors, touched }) => (
                     <Form style={{ marginTop: "-17" }}>
                         <div className="float_left">
-                            <label className="font-size-10" htmlFor="email">Email</label>{touched.email && errors.email && <span className={style.error}>{errors.email}</span>}
+                            <label className="font-size-10" htmlFor="email">Email</label>
+                            {touched.email && errors.email &&
+                                <span className={style.error}>{errors.email}</span>
+                            }
                             <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" id="email" name="email" type="text" placeholder="email@mail.com" />
                         </div>
                         <div className="float_left">
                             <label className="font-size-10" htmlFor="password">Password</label>
-
+                            {touched.password && errors.password &&
+                                <span className={style.error}>{errors.email}</span>
+                            }
                             <Field className="mg-b-10 background_grey box_shadow_4 radius_50 input" id="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" type='password' />
                         </div>
                         <div className="mg-b-20">
