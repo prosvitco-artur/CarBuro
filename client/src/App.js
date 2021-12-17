@@ -10,9 +10,9 @@ function App() {
   return (
     <BrowserRouter >
       <Header />
-      {/* <AppRouter />
+      <AppRouter />
       <Footer />
-      <ModalPopup />*/}
+      <ModalPopup />
       <Preloader /> 
     </BrowserRouter>
   );
